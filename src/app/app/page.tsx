@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Download, Brain, Zap, Shield, Smartphone, Heart, Play, Clock, Award, Cloud, Eye, ArrowRight, ChevronLeft, ChevronRight } from 'lucide-react';
+import { Download, Brain, Zap, Shield, Smartphone, Heart, Play, Clock, Award, Cloud, Eye, ChevronLeft, ChevronRight } from 'lucide-react';
 import { Button } from '@/components/ui/Button';
 import { Card, CardContent } from '@/components/ui/Card';
 import { Layout } from '@/components/Layout';

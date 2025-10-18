@@ -177,7 +177,7 @@ export function MoodSelector() {
                   </h4>
                   <div className="bg-white/20 rounded-lg p-4">
                     <p className="text-white italic">
-                      "{currentMood.affirmation}"
+                      &quot;{currentMood.affirmation}&quot;
                     </p>
                   </div>
                 </div>

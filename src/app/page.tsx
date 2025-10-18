@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-import { Download, Brain, Zap, Shield, Smartphone, Heart, ArrowRight, Play, Plus, ChevronRight, ChevronLeft } from 'lucide-react';
+import { Brain, Zap, Shield, Smartphone, Heart, Play, Plus, ChevronRight, ChevronLeft } from 'lucide-react';
 import { Button } from '@/components/ui/Button';
 import { Card, CardContent } from '@/components/ui/Card';
 import { Layout } from '@/components/Layout';

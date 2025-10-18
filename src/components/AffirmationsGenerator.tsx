@@ -229,7 +229,7 @@ export function AffirmationsGenerator() {
               <h3 className="text-xl font-semibold mb-4">Deine Affirmation</h3>
               <div className="bg-white/20 rounded-lg p-6 mb-6">
                 <p className="text-xl italic leading-relaxed">
-                  "{generatedAffirmation}"
+                  &quot;{generatedAffirmation}&quot;
                 </p>
               </div>
               

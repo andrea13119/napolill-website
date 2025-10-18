@@ -131,8 +131,8 @@ export default function TermsPage() {
               <div className="bg-background p-6 rounded-lg border border-primary-teal/20">
                 <p className="text-foreground/70 leading-relaxed">
                   Diese Allgemeinen Geschäftsbedingungen (AGB) gelten für die Nutzung 
-                  der mobilen Applikation "Napolill" (im Folgenden "App") der 
-                  Napolill GmbH (im Folgenden "Anbieter").
+                  der mobilen Applikation &quot;Napolill&quot; (im Folgenden &quot;App&quot;) der 
+                  Napolill GmbH (im Folgenden &quot;Anbieter&quot;).
                 </p>
                 <p className="text-foreground/70 leading-relaxed mt-4">
                   Mit der Installation und Nutzung der App akzeptierst du diese 

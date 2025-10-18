@@ -338,7 +338,7 @@ export default function SelfAffirmationStudiesPage() {
                     </p>
                     <div className="p-4 bg-secondary-purple/10 rounded-lg mb-4">
                       <p className="text-sm text-foreground/80 font-medium mb-2">Beispiel:</p>
-                      <p className="text-sm text-foreground/70 italic">"{type.example}"</p>
+                      <p className="text-sm text-foreground/70 italic">&quot;{type.example}&quot;</p>
                     </div>
                     <div className="p-3 bg-accent-rose/10 rounded-lg">
                       <p className="text-sm text-accent-rose font-medium">
