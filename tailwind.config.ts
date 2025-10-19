@@ -11,19 +11,38 @@ const config: Config = {
       colors: {
         primary: {
           teal: "var(--primary-teal)",
+          DEFAULT: "var(--primary)",
         },
         secondary: {
           purple: "var(--secondary-purple)",
+          DEFAULT: "var(--secondary)",
         },
         accent: {
           rose: "var(--accent-rose)",
+          DEFAULT: "var(--accent)",
         },
         background: {
           dark: "var(--background-dark)",
+          DEFAULT: "var(--background)",
+        },
+        foreground: {
+          DEFAULT: "var(--foreground)",
         },
         text: {
           light: "var(--text-light)",
           dark: "var(--text-dark)",
+        },
+        glass: {
+          bg: "var(--glass-bg)",
+          border: "var(--glass-border)",
+        },
+        card: {
+          bg: "var(--card-bg)",
+          border: "var(--card-border)",
+        },
+        button: {
+          bg: "var(--button-bg)",
+          text: "var(--button-text)",
         },
       },
       fontFamily: {
@@ -36,6 +55,7 @@ const config: Config = {
         "slide-in-right": "slideInRight 0.5s ease-out",
         "float": "float 3s ease-in-out infinite",
         "pulse-slow": "pulse 3s ease-in-out infinite",
+        "fadeInUp": "fadeInUp 3s ease-in-out infinite",
       },
       keyframes: {
         fadeIn: {
@@ -57,6 +77,11 @@ const config: Config = {
         float: {
           "0%, 100%": { transform: "translateY(0px)" },
           "50%": { transform: "translateY(-10px)" },
+        },
+        fadeInUp: {
+          "0%": { opacity: "0", transform: "translateY(20px)" },
+          "50%": { opacity: "0.8", transform: "translateY(0px)" },
+          "100%": { opacity: "0", transform: "translateY(-20px)" },
         },
       },
       backdropBlur: {

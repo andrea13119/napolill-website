@@ -12,7 +12,7 @@ const Card = forwardRef<HTMLDivElement, CardProps>(
     const baseClasses = "rounded-xl transition-all duration-300";
     
     const variants = {
-      default: "bg-background/80 backdrop-blur-sm border border-primary-teal/20",
+      default: "bg-card-bg backdrop-blur-sm border border-card-border",
       glass: "modern-card",
       'glass-dark': "modern-card"
     };

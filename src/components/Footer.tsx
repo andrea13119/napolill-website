@@ -37,31 +37,22 @@ const socialLinks = [
 
 export function Footer() {
   return (
-    <footer className="bg-secondary-purple border-t border-accent-rose/20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+    <footer className="border-t border-accent-rose/20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 pb-40" style={{paddingBottom: '200px'}}>
+        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-5 gap-6 md:gap-8 lg:gap-12">
           {/* Brand */}
-          <div className="lg:col-span-1">
-            <Link href="/" className="flex items-center space-x-2 mb-4">
-              <div className="w-10 h-10 rounded-lg overflow-hidden">
-                <img 
-                  src="/images/icons/logo_napolill.png" 
-                  alt="Napolill Logo" 
-                  className="w-full h-full object-contain"
-                />
-              </div>
-              <span className="font-bold text-xl text-text-light">Napolill</span>
-            </Link>
-            <p className="text-text-light/80 text-sm mb-4">
-              REPROGRAM-BRAIN
-            </p>
-            <p className="text-text-light/60 text-sm">
-              Die innovative App für Affirmationen und Gehirn-Reprogrammierung mit wissenschaftlichen Solfeggio-Frequenzen.
-            </p>
+          <div className="col-span-2 md:col-span-1 lg:col-span-1 space-y-4 text-center md:text-left">
+            <div className="mb-6">
+              <h2 className="font-bold text-2xl text-white mb-2">Napolill</h2>
+              <p className="text-white/80 text-sm mb-4">REPROGRAM-BRAIN</p>
+              <p className="text-white/90 text-sm leading-relaxed">
+                Die innovative App für Affirmationen und Gehirn-Reprogrammierung mit wissenschaftlichen Solfeggio-Frequenzen.
+              </p>
+            </div>
           </div>
 
           {/* App */}
-          <div>
+          <div className="col-span-1">
             <h3 className="text-text-light font-semibold mb-4">App</h3>
             <ul className="space-y-2">
               {footerNavigation.app.map((item) => (
@@ -78,7 +69,7 @@ export function Footer() {
           </div>
 
           {/* Wissenschaft */}
-          <div>
+          <div className="col-span-1">
             <h3 className="text-text-light font-semibold mb-4">Wissenschaft</h3>
             <ul className="space-y-2">
               {footerNavigation.wissenschaft.map((item) => (
@@ -95,7 +86,7 @@ export function Footer() {
           </div>
 
           {/* Support */}
-          <div>
+          <div className="col-span-1">
             <h3 className="text-text-light font-semibold mb-4">Support</h3>
             <ul className="space-y-2">
               {footerNavigation.support.map((item) => (
@@ -112,7 +103,7 @@ export function Footer() {
           </div>
 
           {/* Rechtliches */}
-          <div>
+          <div className="col-span-1">
             <h3 className="text-text-light font-semibold mb-4">Rechtliches</h3>
             <ul className="space-y-2">
               {footerNavigation.rechtliches.map((item) => (
@@ -151,7 +142,7 @@ export function Footer() {
                   className="p-2 glass hover:glass-dark rounded-lg transition-all hover:scale-110"
                   aria-label={item.name}
                 >
-                  <item.icon className="w-5 h-5 text-text-light hover:text-accent-rose transition-colors" />
+                  <item.icon className="w-5 h-5 text-white hover:text-accent-rose transition-colors" />
                 </Link>
               ))}
             </div>
@@ -159,7 +150,7 @@ export function Footer() {
         </div>
 
         {/* Copyright */}
-        <div className="mt-8 pt-8 border-t border-accent-rose/20 text-center">
+        <div className="mt-12 pt-8 border-t border-accent-rose/20 text-center pb-16">
           <p className="text-text-light/60 text-sm">
             © 2024 Napolill. Alle Rechte vorbehalten. | 
             <Link href="/privacy" className="hover:text-accent-rose transition-colors ml-1">

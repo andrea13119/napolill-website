@@ -33,14 +33,14 @@ export function Navigation() {
     <nav
       className={`
         fixed top-0 left-0 right-0 z-50 transition-all duration-300
-        ${scrolled ? 'glass-dark backdrop-blur-md' : 'bg-transparent'}
+        ${scrolled ? 'glass backdrop-blur-md' : 'bg-transparent'}
       `}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         <div className="flex items-center justify-between h-20 w-full">
           {/* Logo */}
           <Link href="/" className="group flex items-center">
-            <div className="w-16 h-16 rounded-lg overflow-hidden group-hover:scale-105 transition-transform duration-300">
+            <div className="w-30 h-30 rounded-lg overflow-hidden group-hover:scale-105 transition-transform duration-300 flex items-center justify-center">
               <img 
                 src="/images/icons/logo_napolill.png" 
                 alt="Napolill Logo" 
@@ -55,7 +55,7 @@ export function Navigation() {
               <Link
                 key={item.name}
                 href={item.href}
-                className="text-foreground hover:text-accent-rose transition-colors font-medium whitespace-nowrap"
+                className="text-foreground hover:text-accent transition-colors font-medium whitespace-nowrap"
               >
                 {item.name}
               </Link>
@@ -64,25 +64,29 @@ export function Navigation() {
 
           {/* Desktop Actions */}
           <div className="hidden lg:flex items-center space-x-3">
-            <Button variant="outline" size="sm" className="text-sm">
-              <Download className="w-4 h-4 mr-1" />
+            <Button variant="outline" size="sm" className="text-sm h-12">
+              <Download className="w-5 h-5 mr-2" />
               Download
             </Button>
-            <ThemeToggle />
+            <div className="w-12 h-12 flex items-center justify-center">
+              <ThemeToggle />
+            </div>
           </div>
 
           {/* Mobile menu button */}
-          <div className="lg:hidden flex items-center space-x-6">
-            <ThemeToggle />
+          <div className="lg:hidden flex items-center space-x-3">
+            <div className="w-12 h-12 flex items-center justify-center">
+              <ThemeToggle />
+            </div>
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="p-2 rounded-lg glass hover:glass-dark transition-all"
+              className="w-12 h-12 flex items-center justify-center rounded-lg glass hover:glass-dark transition-all"
               aria-label="Toggle menu"
             >
               {isOpen ? (
-                <X className="w-7 h-7 text-foreground" />
+                <X className="w-6 h-6 text-foreground" />
               ) : (
-                <Menu className="w-7 h-7 text-foreground" />
+                <Menu className="w-6 h-6 text-foreground" />
               )}
             </button>
           </div>
