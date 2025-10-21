@@ -5,6 +5,7 @@ import { Brain, BookOpen, Microscope, Zap, ArrowRight, Users, Clock, Shield } fr
 import { Button } from '@/components/ui/Button';
 import { Card, CardContent } from '@/components/ui/Card';
 import { Layout } from '@/components/Layout';
+import { NapolillLogo } from '@/components/NapolillLogo';
 import Link from 'next/link';
 
 const researchAreas = [
@@ -78,33 +79,24 @@ export default function SciencePage() {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="relative py-20 bg-napolill-gradient overflow-hidden">
+      <section className="relative min-h-[50vh] bg-napolill-gradient overflow-hidden flex items-center justify-center">
         <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10" />
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="text-center"
+            className="text-center flex flex-col items-center justify-center min-h-[50vh]"
           >
-            <div className="flex items-center justify-center mb-6">
-              <div className="w-16 h-16 rounded-xl overflow-hidden bg-white/10 p-2">
-                <img 
-                  src="/images/icons/logo_napolill.png" 
-                  alt="Napolill Logo" 
-                  className="w-full h-full object-contain"
-                />
-              </div>
-            </div>
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+            <h1 className="text-5xl md:text-6xl font-bold text-foreground mb-6">
               Wissenschaftliche Grundlagen
             </h1>
-            <p className="text-xl md:text-2xl text-white/90 max-w-4xl mx-auto mb-8">
+            <p className="text-xl md:text-2xl text-foreground/90 max-w-4xl mx-auto mb-8">
               Die Napolill App basiert auf aktueller Forschung zu Affirmationen, 
               Solfeggio-Frequenzen und Gehirn-Reprogrammierung. Entdecke die 
               wissenschaftlichen Erkenntnisse hinter unserer Technologie.
             </p>
-            <div className="flex items-center justify-center space-x-8 text-white/70 text-sm">
+            <div className="flex items-center justify-center space-x-8 text-foreground/70 text-sm">
               <div className="flex items-center">
                 <BookOpen className="w-4 h-4 mr-2" />
                 Peer-Reviewed Studien
@@ -153,8 +145,8 @@ export default function SciencePage() {
                 <Card variant="glass" hover className="h-full">
                   <CardContent className="p-8">
                     <div className="flex items-start space-x-4 mb-6">
-                      <div className="w-16 h-16 bg-napolill-gradient rounded-xl flex items-center justify-center flex-shrink-0">
-                        <area.icon className="w-8 h-8 text-white" />
+                      <div className="w-16 h-16 bg-icon-gradient rounded-xl flex items-center justify-center flex-shrink-0">
+                        <area.icon className="w-8 h-8 text-[var(--icon-color)]" />
                       </div>
                       <div className="flex-1">
                         <h3 className="text-xl font-semibold text-foreground mb-3">
@@ -381,25 +373,25 @@ export default function SciencePage() {
                 </h3>
                 <div className="space-y-4">
                   <div className="flex items-center space-x-3">
-                    <div className="w-8 h-8 bg-napolill-gradient rounded-full flex items-center justify-center text-white text-sm font-bold">
+                    <div className="w-8 h-8 bg-icon-gradient rounded-full flex items-center justify-center text-[var(--icon-color)] text-sm font-bold">
                       1
                     </div>
                     <p className="text-foreground/70">Affirmationen aktivieren positive Denkmuster</p>
                   </div>
                   <div className="flex items-center space-x-3">
-                    <div className="w-8 h-8 bg-napolill-gradient rounded-full flex items-center justify-center text-white text-sm font-bold">
+                    <div className="w-8 h-8 bg-icon-gradient rounded-full flex items-center justify-center text-[var(--icon-color)] text-sm font-bold">
                       2
                     </div>
                     <p className="text-foreground/70">Solfeggio-Frequenzen optimieren Gehirnwellen</p>
                   </div>
                   <div className="flex items-center space-x-3">
-                    <div className="w-8 h-8 bg-napolill-gradient rounded-full flex items-center justify-center text-white text-sm font-bold">
+                    <div className="w-8 h-8 bg-icon-gradient rounded-full flex items-center justify-center text-[var(--icon-color)] text-sm font-bold">
                       3
                     </div>
                     <p className="text-foreground/70">Wiederholung verstärkt neue neuronale Pfade</p>
                   </div>
                   <div className="flex items-center space-x-3">
-                    <div className="w-8 h-8 bg-napolill-gradient rounded-full flex items-center justify-center text-white text-sm font-bold">
+                    <div className="w-8 h-8 bg-icon-gradient rounded-full flex items-center justify-center text-[var(--icon-color)] text-sm font-bold">
                       4
                     </div>
                     <p className="text-foreground/70">Schlaf konsolidiert die neuen Muster</p>
@@ -421,10 +413,10 @@ export default function SciencePage() {
             viewport={{ once: true }}
             className="space-y-8"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
               Wissenschaft trifft Praxis
             </h2>
-            <p className="text-xl text-white/90 max-w-3xl mx-auto mb-12">
+            <p className="text-xl text-foreground/90 max-w-3xl mx-auto mb-12">
               Erlebe selbst, wie wissenschaftliche Erkenntnisse in eine 
               praktische, benutzerfreundliche App umgesetzt werden.
             </p>

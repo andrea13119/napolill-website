@@ -176,23 +176,23 @@ export default function FAQPage() {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="relative py-20 bg-napolill-gradient overflow-hidden">
+      <section className="relative min-h-[50vh] bg-napolill-gradient overflow-hidden flex items-center justify-center">
         <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10" />
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="text-center"
+            className="text-center flex flex-col items-center justify-center min-h-[50vh]"
           >
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+            <h1 className="text-5xl md:text-6xl font-bold text-foreground mb-6">
               Häufige Fragen
             </h1>
-            <p className="text-xl md:text-2xl text-white/90 max-w-4xl mx-auto mb-8">
+            <p className="text-xl md:text-2xl text-foreground/90 max-w-4xl mx-auto mb-8">
               Finde Antworten auf die wichtigsten Fragen zu Napolill, 
               seinen Funktionen und der Wissenschaft dahinter.
             </p>
-            <div className="flex items-center justify-center space-x-8 text-white/70 text-sm">
+            <div className="flex items-center justify-center space-x-8 text-foreground/70 text-sm">
               <div className="flex items-center">
                 <HelpCircle className="w-4 h-4 mr-2" />
                 Umfassende Hilfe

@@ -130,27 +130,27 @@ export default function SelfAffirmationStudiesPage() {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="relative py-20 bg-napolill-gradient overflow-hidden">
+      <section className="relative min-h-[50vh] bg-napolill-gradient overflow-hidden flex items-center justify-center">
         <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10" />
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="text-center"
+            className="text-center flex flex-col items-center justify-center min-h-[50vh]"
           >
-            <Link href="/science" className="inline-flex items-center text-white/70 hover:text-white mb-6 transition-colors">
+            <Link href="/science" className="inline-flex items-center text-foreground/70 hover:text-foreground mb-6 transition-colors">
               <ArrowLeft className="w-4 h-4 mr-2" />
               Zurück zur Wissenschaft
             </Link>
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+            <h1 className="text-5xl md:text-6xl font-bold text-foreground mb-6">
               Selbstaffirmationsstudien
             </h1>
-            <p className="text-xl md:text-2xl text-white/90 max-w-4xl mx-auto mb-8">
+            <p className="text-xl md:text-2xl text-foreground/90 max-w-4xl mx-auto mb-8">
               Die wissenschaftliche Erforschung der Wirkung von Selbstaffirmationen 
               auf Gehirn, Verhalten und Wohlbefinden - die Grundlage der Napolill App.
             </p>
-            <div className="flex items-center justify-center space-x-8 text-white/70 text-sm">
+            <div className="flex items-center justify-center space-x-8 text-foreground/70 text-sm">
               <div className="flex items-center">
                 <Heart className="w-4 h-4 mr-2" />
                 Selbstwert
@@ -275,8 +275,8 @@ export default function SelfAffirmationStudiesPage() {
                 <Card variant="glass" hover className="h-full">
                   <CardContent className="p-8">
                     <div className="flex items-start space-x-4 mb-6">
-                      <div className="w-16 h-16 bg-napolill-gradient rounded-xl flex items-center justify-center flex-shrink-0">
-                        <mechanism.icon className="w-8 h-8 text-white" />
+                      <div className="w-16 h-16 bg-icon-gradient rounded-xl flex items-center justify-center flex-shrink-0">
+                        <mechanism.icon className="w-8 h-8 text-[var(--icon-color)]" />
                       </div>
                       <div className="flex-1">
                         <h3 className="text-xl font-semibold text-foreground mb-3">
@@ -480,25 +480,25 @@ export default function SelfAffirmationStudiesPage() {
                 </h3>
                 <div className="space-y-4">
                   <div className="flex items-center space-x-3">
-                    <div className="w-8 h-8 bg-napolill-gradient rounded-full flex items-center justify-center text-white text-sm font-bold">
+                    <div className="w-8 h-8 bg-icon-gradient rounded-full flex items-center justify-center text-[var(--icon-color)] text-sm font-bold">
                       1
                     </div>
                     <p className="text-foreground/70">Personalisierte Affirmationen für maximale Relevanz</p>
                   </div>
                   <div className="flex items-center space-x-3">
-                    <div className="w-8 h-8 bg-napolill-gradient rounded-full flex items-center justify-center text-white text-sm font-bold">
+                    <div className="w-8 h-8 bg-icon-gradient rounded-full flex items-center justify-center text-[var(--icon-color)] text-sm font-bold">
                       2
                     </div>
                     <p className="text-foreground/70">Regelmäßige Wiederholung für neuronale Bahnung</p>
                   </div>
                   <div className="flex items-center space-x-3">
-                    <div className="w-8 h-8 bg-napolill-gradient rounded-full flex items-center justify-center text-white text-sm font-bold">
+                    <div className="w-8 h-8 bg-icon-gradient rounded-full flex items-center justify-center text-[var(--icon-color)] text-sm font-bold">
                       3
                     </div>
                     <p className="text-foreground/70">Frequenz-Kombination für verstärkte Wirkung</p>
                   </div>
                   <div className="flex items-center space-x-3">
-                    <div className="w-8 h-8 bg-napolill-gradient rounded-full flex items-center justify-center text-white text-sm font-bold">
+                    <div className="w-8 h-8 bg-icon-gradient rounded-full flex items-center justify-center text-[var(--icon-color)] text-sm font-bold">
                       4
                     </div>
                     <p className="text-foreground/70">Fortschrittsverfolgung für Motivation</p>
@@ -520,10 +520,10 @@ export default function SelfAffirmationStudiesPage() {
             viewport={{ once: true }}
             className="space-y-8"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
               Starte deine Affirmations-Reise
             </h2>
-            <p className="text-xl text-white/90 max-w-3xl mx-auto mb-12">
+            <p className="text-xl text-foreground/90 max-w-3xl mx-auto mb-12">
               Erlebe in der Napolill App, wie wissenschaftlich fundierte 
               Selbstaffirmationen dein Leben verändern können.
             </p>

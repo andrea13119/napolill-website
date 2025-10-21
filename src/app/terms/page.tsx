@@ -28,30 +28,30 @@ export default function TermsPage() {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="relative py-20 bg-napolill-gradient overflow-hidden">
+      <section className="relative min-h-[50vh] bg-napolill-gradient overflow-hidden flex items-center justify-center">
         <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10" />
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="text-center"
+            className="text-center flex flex-col items-center justify-center min-h-[50vh]"
           >
-            <Link href="/" className="inline-flex items-center text-white/70 hover:text-white mb-6 transition-colors">
+            <Link href="/" className="inline-flex items-center text-foreground/70 hover:text-foreground mb-6 transition-colors">
               <ArrowLeft className="w-4 h-4 mr-2" />
               Zurück zur Startseite
             </Link>
             
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+            <h1 className="text-5xl md:text-6xl font-bold text-foreground mb-6">
               Allgemeine Geschäftsbedingungen
             </h1>
 
-            <p className="text-xl md:text-2xl text-white/90 max-w-4xl mx-auto mb-8">
+            <p className="text-xl md:text-2xl text-foreground/90 max-w-4xl mx-auto mb-8">
               Die Nutzungsbedingungen für die Napolill App - 
               einfach, fair und transparent.
             </p>
 
-            <div className="flex items-center justify-center space-x-8 text-white/70 text-sm">
+            <div className="flex items-center justify-center space-x-8 text-foreground/70 text-sm">
               <div className="flex items-center">
                 <FileText className="w-4 h-4 mr-2" />
                 Aktualisiert: Januar 2024
@@ -98,8 +98,8 @@ export default function TermsPage() {
                 viewport={{ once: true }}
                 className="text-center"
               >
-                <div className="w-20 h-20 bg-napolill-gradient rounded-xl flex items-center justify-center mx-auto mb-6">
-                  <point.icon className="w-10 h-10 text-white" />
+                <div className="w-20 h-20 bg-icon-gradient rounded-xl flex items-center justify-center mx-auto mb-6">
+                  <point.icon className="w-10 h-10 text-[var(--icon-color)]" />
                 </div>
                 <h3 className="text-xl font-semibold text-foreground mb-4">
                   {point.title}

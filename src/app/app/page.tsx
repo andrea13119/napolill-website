@@ -5,6 +5,8 @@ import { Download, Brain, Zap, Shield, Smartphone, Heart, Play, Clock, Award, Cl
 import { Button } from '@/components/ui/Button';
 import { Card, CardContent } from '@/components/ui/Card';
 import { Layout } from '@/components/Layout';
+import { BrainIcon } from '@/components/BrainIcon';
+import { NapolillLogo } from '@/components/NapolillLogo';
 import { useState } from 'react';
 
 const solfeggioFrequencies = [
@@ -161,28 +163,19 @@ export default function AppPage() {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="relative py-20 bg-napolill-gradient overflow-hidden">
+      <section className="relative min-h-[50vh] bg-napolill-gradient overflow-hidden flex items-center justify-center">
         <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10" />
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="text-center"
+            className="text-center flex flex-col items-center justify-center min-h-[50vh]"
           >
-            <div className="flex items-center justify-center mb-6">
-              <div className="w-16 h-16 rounded-xl overflow-hidden bg-white/10 p-2">
-                <img 
-                  src="/images/icons/logo_napolill.png" 
-                  alt="Napolill Logo" 
-                  className="w-full h-full object-contain"
-                />
-              </div>
-            </div>
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+            <h1 className="text-5xl md:text-6xl font-bold text-foreground mb-6">
               Die Napolill App
             </h1>
-            <p className="text-xl md:text-2xl text-white/90 max-w-3xl mx-auto mb-8">
+            <p className="text-xl md:text-2xl text-foreground/90 max-w-3xl mx-auto mb-8">
               Entdecke die revolutionäre Kombination aus Affirmationen und 
               Solfeggio-Frequenzen für maximale Gehirn-Reprogrammierung.
             </p>
@@ -257,13 +250,9 @@ export default function AppPage() {
                     <div className="flex items-start space-x-4">
                       <div className="w-16 h-16 bg-napolill-gradient rounded-xl flex items-center justify-center flex-shrink-0">
                         {feature.title === 'Persönliche Affirmationen' ? (
-                          <img 
-                            src="/images/icons/brain.png" 
-                            alt="Brain Icon" 
-                            className="w-8 h-8 object-contain filter brightness-0 invert"
-                          />
+                          <BrainIcon size="md" className="filter brightness-0 invert" />
                         ) : (
-                          <feature.icon className="w-8 h-8 text-white" />
+                          <feature.icon className="w-8 h-8 text-[var(--icon-color)]" />
                         )}
                       </div>
                       <div className="flex-1">
@@ -444,10 +433,10 @@ export default function AppPage() {
             viewport={{ once: true }}
             className="space-y-8"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
               Starte deine Transformation
             </h2>
-            <p className="text-xl text-white/90 max-w-3xl mx-auto mb-12">
+            <p className="text-xl text-foreground/90 max-w-3xl mx-auto mb-12">
               Lade die Napolill App jetzt herunter und beginne deine Reise 
               zur Gehirn-Reprogrammierung mit wissenschaftlichen Methoden.
             </p>

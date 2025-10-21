@@ -7,6 +7,7 @@ import { Brain, Zap, Shield, Smartphone, Heart, Play, Plus, ChevronRight, Chevro
 import { Button } from '@/components/ui/Button';
 import { Card, CardContent } from '@/components/ui/Card';
 import { Layout } from '@/components/Layout';
+import { WebsiteHeader } from '@/components/WebsiteHeader';
 
 const features = [
   {
@@ -127,16 +128,8 @@ export default function Home() {
         
         {/* Website Header Image - Background */}
         <div className="absolute top-0 left-0 right-0 h-full overflow-hidden">
-          <img 
-            src="/images/icons/website-header_mobile.png" 
-            alt="Napolill Website Header Mobile" 
-            className="w-full h-full object-cover object-center opacity-100 md:hidden transition-all duration-300 min-h-screen"
-          />
-          <img 
-            src="/images/icons/website-header.png" 
-            alt="Napolill Website Header Desktop" 
-            className="hidden md:block w-full h-full object-cover object-center opacity-100 transition-all duration-300 min-h-screen"
-          />
+          <WebsiteHeader variant="mobile" />
+          <WebsiteHeader variant="desktop" />
           
           
           {/* Sanfter Übergang am oberen Rand */}
@@ -163,21 +156,21 @@ export default function Home() {
               {/* Main Title - Verbessertes Styling mit mehr Abständen */}
               <motion.div variants={itemVariants} className="space-y-10">
                 <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold leading-tight">
-                  <span className="block text-white drop-shadow-2xl shadow-black/80 mb-4">Positives Denken</span>
-                  <span className="block bg-gradient-to-r from-white via-white to-white bg-clip-text text-transparent drop-shadow-lg shadow-black/60">
-                    {modes[currentMode]}
+                  <span className="block text-[#2D7A8A] drop-shadow-2xl shadow-black/80 mb-4">DEINE STIMME</span>
+                  <span className="block bg-gradient-to-r from-[#2D7A8A] via-[#2D7A8A] to-[#2D7A8A] bg-clip-text text-transparent drop-shadow-lg shadow-black/60">
+                    DEIN NEUES SELBST
                   </span>
                 </h1>
                 <p 
-                  className="text-lg sm:text-xl md:text-2xl max-w-2xl mx-auto leading-relaxed font-light text-white drop-shadow-xl shadow-black/70 text-center my-8"
+                  className="text-lg sm:text-xl md:text-2xl max-w-4xl mx-auto leading-relaxed font-light text-foreground drop-shadow-xl shadow-black/70 text-center my-8"
                   style={{
-                    maxWidth: '500px',
+                    maxWidth: '800px',
                     marginTop: '40px',
                     marginBottom: '40px',
                     fontSize: '1.5rem'
                   }}
                 >
-                  Die App mit Modi für jede Stimmung in deinem Leben.
+                  Trainiere täglich mit personalisierten Affirmationen und geführten Vorstellungsbildern, damit sich Stärke, Ruhe und Fokus zur Gewohnheit formen. Keine Floskeln. Nur Methoden, die Verhalten messbar verändern.
                 </p>
               </motion.div>
 
@@ -207,7 +200,7 @@ export default function Home() {
                         className={`px-6 py-4 sm:px-8 sm:py-4 rounded-xl font-semibold transition-all duration-300 text-base sm:text-lg min-w-[140px] ${
                           currentMode === index
                             ? 'bg-white text-black shadow-lg transform scale-105'
-                            : 'text-white/80 hover:text-white hover:bg-white/10 hover:scale-105'
+                            : 'text-foreground/80 hover:text-foreground hover:bg-foreground/10 hover:scale-105'
                         }`}
                       >
                         {mode}

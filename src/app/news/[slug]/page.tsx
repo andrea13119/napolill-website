@@ -138,35 +138,35 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="relative py-20 bg-napolill-gradient overflow-hidden">
+      <section className="relative min-h-[50vh] bg-napolill-gradient overflow-hidden flex items-center justify-center">
         <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10" />
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="text-center"
+            className="text-center flex flex-col items-center justify-center min-h-[50vh]"
           >
-            <Link href="/news" className="inline-flex items-center text-white/70 hover:text-white mb-6 transition-colors">
+            <Link href="/news" className="inline-flex items-center text-foreground/70 hover:text-foreground mb-6 transition-colors">
               <ArrowLeft className="w-4 h-4 mr-2" />
               Zurück zu den News
             </Link>
             
             <div className="mb-4">
-              <span className="inline-block px-4 py-2 bg-white/20 backdrop-blur-sm text-white text-sm font-medium rounded-full">
+              <span className="inline-block px-4 py-2 bg-white/20 backdrop-blur-sm text-foreground text-sm font-medium rounded-full">
                 {post.category}
               </span>
             </div>
 
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight">
               {post.title}
             </h1>
 
-            <p className="text-xl md:text-2xl text-white/90 max-w-4xl mx-auto mb-8">
+            <p className="text-xl md:text-2xl text-foreground/90 max-w-4xl mx-auto mb-8">
               {post.excerpt}
             </p>
 
-            <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-8 text-white/70 text-sm">
+            <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-8 text-foreground/70 text-sm">
               <div className="flex items-center">
                 <User className="w-4 h-4 mr-2" />
                 {post.author}

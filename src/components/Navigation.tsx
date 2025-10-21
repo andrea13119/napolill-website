@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { Menu, X, Download } from 'lucide-react';
 import { Button } from './ui/Button';
 import { ThemeToggle } from './ThemeToggle';
+import { NapolillLogo } from './NapolillLogo';
 
 const navigation = [
   { name: 'Home', href: '/' },
@@ -41,11 +42,7 @@ export function Navigation() {
           {/* Logo */}
           <Link href="/" className="group flex items-center">
             <div className="w-30 h-30 rounded-lg overflow-hidden group-hover:scale-105 transition-transform duration-300 flex items-center justify-center">
-              <img 
-                src="/images/icons/logo_napolill.png" 
-                alt="Napolill Logo" 
-                className="w-full h-full object-contain"
-              />
+              <NapolillLogo size="xl" className="w-50 h-50" />
             </div>
           </Link>
 

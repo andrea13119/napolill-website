@@ -124,21 +124,21 @@ export default function PrivacyPage() {
               transition={{ duration: 0.6 }}
               className="text-center flex flex-col items-center justify-center min-h-[50vh]"
             >
-              <Link href="/" className="inline-flex items-center text-white/70 hover:text-white mb-8 transition-colors group">
+              <Link href="/" className="inline-flex items-center text-foreground/70 hover:text-foreground mb-8 transition-colors group">
                 <ArrowLeft className="w-4 h-4 mr-2 group-hover:-translate-x-1 transition-transform" />
                 Zurück zur Startseite
               </Link>
               
-              <h1 className="text-6xl md:text-7xl font-bold text-white mb-8 leading-tight">
+              <h1 className="text-6xl md:text-7xl font-bold text-foreground mb-8 leading-tight">
                 Datenschutzerklärung
               </h1>
 
-              <p className="text-xl md:text-2xl text-white/90 max-w-4xl mx-auto mb-12 leading-relaxed">
+              <p className="text-xl md:text-2xl text-foreground/90 max-w-4xl mx-auto mb-12 leading-relaxed">
                 Dein Datenschutz ist uns wichtig. Hier erfährst du, wie wir 
                 deine Daten schützen und verarbeiten.
               </p>
 
-              <div className="flex flex-wrap items-center justify-center gap-8 text-white/70 text-sm">
+              <div className="flex flex-wrap items-center justify-center gap-8 text-foreground/70 text-sm">
                 <div className="flex items-center bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full">
                   <Shield className="w-5 h-5 mr-2" />
                   DSGVO-konform
@@ -186,8 +186,8 @@ export default function PrivacyPage() {
                 viewport={{ once: true }}
               >
                 <Card className="h-full p-8 text-center hover:shadow-xl transition-all duration-300 group border-2 border-transparent hover:border-primary-teal/20">
-                  <div className="w-24 h-24 bg-napolill-gradient rounded-2xl flex items-center justify-center mx-auto mb-8 group-hover:scale-110 transition-transform duration-300">
-                    <principle.icon className="w-12 h-12 text-white" />
+                  <div className="w-24 h-24 bg-icon-gradient rounded-2xl flex items-center justify-center mx-auto mb-8 group-hover:scale-110 transition-transform duration-300">
+                    <principle.icon className="w-12 h-12 text-[var(--icon-color)]" />
                   </div>
                   <h3 className="text-2xl font-bold text-foreground mb-6">
                     {principle.title}
@@ -227,8 +227,8 @@ export default function PrivacyPage() {
                 <Card className="p-12 border-2 border-primary-teal/20 bg-background/50 backdrop-blur-sm">
                   <div className="flex flex-col lg:flex-row items-start space-y-8 lg:space-y-0 lg:space-x-12">
                     <div className="w-full lg:w-auto flex-shrink-0">
-                      <div className="w-24 h-24 bg-napolill-gradient rounded-2xl flex items-center justify-center mx-auto lg:mx-0">
-                        <Users className="w-12 h-12 text-white" />
+                      <div className="w-24 h-24 bg-icon-gradient rounded-2xl flex items-center justify-center mx-auto lg:mx-0">
+                        <Users className="w-12 h-12 text-[var(--icon-color)]" />
                       </div>
                     </div>
                     <div className="flex-1 space-y-8">
@@ -297,8 +297,8 @@ export default function PrivacyPage() {
                 <Card className="p-12 border-2 border-primary-teal/20 bg-background/50 backdrop-blur-sm">
                   <div className="flex flex-col lg:flex-row items-start space-y-8 lg:space-y-0 lg:space-x-12">
                     <div className="w-full lg:w-auto flex-shrink-0">
-                      <div className="w-24 h-24 bg-napolill-gradient rounded-2xl flex items-center justify-center mx-auto lg:mx-0">
-                        <Shield className="w-12 h-12 text-white" />
+                      <div className="w-24 h-24 bg-icon-gradient rounded-2xl flex items-center justify-center mx-auto lg:mx-0">
+                        <Shield className="w-12 h-12 text-[var(--icon-color)]" />
                       </div>
                     </div>
                     <div className="flex-1 space-y-8">
@@ -353,8 +353,8 @@ export default function PrivacyPage() {
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
                 <Card className="p-10 border-2 border-primary-teal/20 bg-background/50 backdrop-blur-sm h-full">
                   <div className="space-y-6">
-                    <div className="w-16 h-16 bg-napolill-gradient rounded-xl flex items-center justify-center">
-                      <Database className="w-8 h-8 text-white" />
+                    <div className="w-16 h-16 bg-icon-gradient rounded-xl flex items-center justify-center">
+                      <Database className="w-8 h-8 text-[var(--icon-color)]" />
                     </div>
                     <div>
                       <h3 className="text-2xl font-bold text-foreground mb-6">
@@ -372,8 +372,8 @@ export default function PrivacyPage() {
                 
                 <Card className="p-10 border-2 border-primary-teal/20 bg-background/50 backdrop-blur-sm h-full">
                   <div className="space-y-6">
-                    <div className="w-16 h-16 bg-napolill-gradient rounded-xl flex items-center justify-center">
-                      <FileText className="w-8 h-8 text-white" />
+                    <div className="w-16 h-16 bg-icon-gradient rounded-xl flex items-center justify-center">
+                      <FileText className="w-8 h-8 text-[var(--icon-color)]" />
                     </div>
                     <div>
                       <h3 className="text-2xl font-bold text-foreground mb-6">
@@ -408,8 +408,8 @@ export default function PrivacyPage() {
                   <Card key={index} className="p-8 border-2 border-primary-teal/20 hover:border-primary-teal/40 transition-all duration-300 bg-background/50 backdrop-blur-sm">
                     <div className="space-y-6">
                       <div className="flex items-start space-x-4">
-                        <div className="w-16 h-16 bg-napolill-gradient rounded-xl flex items-center justify-center flex-shrink-0">
-                          <dataType.icon className="w-8 h-8 text-white" />
+                        <div className="w-16 h-16 bg-icon-gradient rounded-xl flex items-center justify-center flex-shrink-0">
+                          <dataType.icon className="w-8 h-8 text-[var(--icon-color)]" />
                         </div>
                         <div className="flex-1">
                           <h3 className="text-2xl font-bold text-foreground mb-2">
@@ -541,8 +541,8 @@ export default function PrivacyPage() {
                 <Card className="p-12 border-2 border-primary-teal/20 bg-background/50 backdrop-blur-sm">
                   <div className="space-y-8">
                     <div className="text-center">
-                      <div className="w-24 h-24 bg-napolill-gradient rounded-2xl flex items-center justify-center mx-auto mb-6">
-                        <Shield className="w-12 h-12 text-white" />
+                      <div className="w-24 h-24 bg-icon-gradient rounded-2xl flex items-center justify-center mx-auto mb-6">
+                        <Shield className="w-12 h-12 text-[var(--icon-color)]" />
                       </div>
                       <h3 className="text-3xl font-bold text-foreground mb-6">
                         Umfassende Sicherheitsmaßnahmen
@@ -588,8 +588,8 @@ export default function PrivacyPage() {
               <div className="max-w-4xl mx-auto">
                 <Card className="p-12 border-2 border-primary-teal/20 bg-background/50 backdrop-blur-sm">
                   <div className="text-center space-y-6">
-                    <div className="w-20 h-20 bg-napolill-gradient rounded-xl flex items-center justify-center mx-auto">
-                      <FileText className="w-10 h-10 text-white" />
+                    <div className="w-20 h-20 bg-icon-gradient rounded-xl flex items-center justify-center mx-auto">
+                      <FileText className="w-10 h-10 text-[var(--icon-color)]" />
                     </div>
                     <h3 className="text-2xl font-bold text-foreground mb-6">
                       Aktualisierungen der Datenschutzerklärung
@@ -632,8 +632,8 @@ export default function PrivacyPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
               <Card className="p-8 border-2 border-primary-teal/20 hover:border-primary-teal/40 transition-colors group">
                 <div className="space-y-6">
-                  <div className="w-16 h-16 bg-napolill-gradient rounded-xl flex items-center justify-center mx-auto group-hover:scale-110 transition-transform">
-                    <Shield className="w-8 h-8 text-white" />
+                  <div className="w-16 h-16 bg-icon-gradient rounded-xl flex items-center justify-center mx-auto group-hover:scale-110 transition-transform">
+                    <Shield className="w-8 h-8 text-[var(--icon-color)]" />
                   </div>
                   <h3 className="text-2xl font-bold text-foreground">
                     Datenschutz kontaktieren

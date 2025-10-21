@@ -43,9 +43,9 @@ export function Footer() {
           {/* Brand */}
           <div className="col-span-2 md:col-span-1 lg:col-span-1 space-y-4 text-center md:text-left">
             <div className="mb-6">
-              <h2 className="font-bold text-2xl text-white mb-2">Napolill</h2>
-              <p className="text-white/80 text-sm mb-4">REPROGRAM-BRAIN</p>
-              <p className="text-white/90 text-sm leading-relaxed">
+              <h2 className="font-bold text-2xl text-foreground mb-2">Napolill</h2>
+              <p className="text-foreground/80 text-sm mb-4">REPROGRAM-BRAIN</p>
+              <p className="text-foreground/90 text-sm leading-relaxed">
                 Die innovative App für Affirmationen und Gehirn-Reprogrammierung mit wissenschaftlichen Solfeggio-Frequenzen.
               </p>
             </div>
@@ -142,7 +142,7 @@ export function Footer() {
                   className="p-2 glass hover:glass-dark rounded-lg transition-all hover:scale-110"
                   aria-label={item.name}
                 >
-                  <item.icon className="w-5 h-5 text-white hover:text-accent-rose transition-colors" />
+                  <item.icon className="w-5 h-5 text-foreground hover:text-accent-rose transition-colors" />
                 </Link>
               ))}
             </div>

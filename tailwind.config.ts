@@ -91,6 +91,7 @@ const config: Config = {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic": "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
         "napolill-gradient": "linear-gradient(135deg, var(--primary-teal) 0%, var(--secondary-purple) 100%)",
+        "icon-gradient": "var(--icon-gradient)",
         "brain-gradient-blue-purple": "var(--gradient-blue-purple)",
         "brain-gradient-purple-pink": "var(--gradient-purple-pink)",
         "brain-gradient-blue-pink": "var(--gradient-blue-pink)",

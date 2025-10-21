@@ -1,84 +1,79 @@
 @import "tailwindcss";
 
 :root {
-  /* Napolill Brand Colors - Midnight Elegance Light Mode as Dark Mode */
-  --primary-teal: #FFFFFF;      /* Weiß statt Midnight */
-  --secondary-purple: #FFFFFF;   /* Weiß statt Navy */
-  --accent-rose: #FFFFFF;       /* Weiß statt Blau */
-  --background-dark: #F8F9FA;    /* Heller Hintergrund (Light Mode) */
-  --background-darker: #E8E8E8;  /* Noch hellerer Hintergrund */
-  --text-light: #FFFFFF;        /* Weißer Text */
-  --text-dark: #000000;
+  /* Napolill Brand Colors */
+  --primary-teal: #2D7A8A;      /* Napolill Teal */
+  --secondary-purple: #5A4A6A;   /* Lila Akzent */
+  --accent-rose: #FFB3B3;       /* Rose Akzent */
+  --text-light: #FFFFFF;        /* Helle Schrift */
+  --text-dark: #1A1A2E;        /* Dunkle Schrift */
   
-  /* Midnight Elegance inspired gradients - Dark Mode */
+  /* Used Gradients */
   --gradient-blue-purple: linear-gradient(135deg, #1A1A2E 0%, #16213E 100%);
   --gradient-purple-pink: linear-gradient(135deg, #16213E 0%, #0F3460 100%);
   --gradient-blue-pink: linear-gradient(135deg, #1A1A2E 0%, #0F3460 100%);
   --gradient-napolill-dark: linear-gradient(135deg, #0A0A0F 0%, #1A1A2E 50%, #16213E 100%);
   
-  /* Light Mode gradients */
-  --gradient-light-primary: linear-gradient(135deg, #1A1A2E 0%, #16213E 100%);
-  --gradient-light-secondary: linear-gradient(135deg, #16213E 0%, #0F3460 100%);
-  --gradient-light-accent: linear-gradient(135deg, #1A1A2E 0%, #0F3460 100%);
-  --gradient-napolill-light: linear-gradient(135deg, #F8F9FA 0%, #1A1A2E 50%, #16213E 100%);
-  
-  /* Theme Variables */
-  --background: var(--background-dark);
-  --foreground: var(--text-light);
-  
-  /* Filter Layer Variables - Default Dark Mode */
-  --header-filter-1: linear-gradient(135deg, rgba(26, 26, 46, 0.20) 0%, rgba(22, 33, 62, 0.15) 100%);
-  --header-filter-2: linear-gradient(45deg, rgba(22, 33, 62, 0.15) 0%, rgba(15, 52, 96, 0.20) 100%);
-  --header-filter-3: linear-gradient(90deg, rgba(26, 26, 46, 0.10) 0%, rgba(15, 52, 96, 0.15) 100%);
-  --footer-filter: linear-gradient(135deg, rgba(10, 10, 15, 0.95) 0%, rgba(26, 26, 46, 0.90) 50%, rgba(22, 33, 62, 0.95) 100%);
-  
   /* Font Variables */
   --font-poppins: 'Poppins', sans-serif;
 }
 
-/* Dark Mode (Default) - Midnight Elegance Light Mode Colors */
+/* Dark Mode */
 [data-theme="dark"] {
-  --background: #F8F9FA;        /* Heller Hintergrund */
-  --foreground: #FFFFFF;        /* Weißer Text */
-  --primary: var(--primary-teal);
-  --secondary: var(--secondary-purple);
-  --accent: var(--accent-rose);
+  --background: #1A1A2E;        /* Dunkler Hintergrund */
+  --foreground: #FFFFFF;         /* Helle Schrift */
+  --primary: #2D7A8A;            /* Napolill Teal */
+  --secondary: #5A4A6A;          /* Lila Akzent */
+  --accent: #FFB3B3;             /* Rose Akzent */
+  --glass-bg: rgba(255, 255, 255, 0.05);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --card-bg: rgba(255, 255, 255, 0.02);
+  --card-border: rgba(255, 255, 255, 0.05);
+  --button-bg: var(--primary-teal);
+  --button-text: #FFFFFF;
+  --footer-filter: linear-gradient(135deg, rgba(10, 10, 15, 0.95) 0%, rgba(26, 26, 46, 0.90) 50%, rgba(22, 33, 62, 0.95) 100%);
+  
+  /* Theme-aware Icon Gradients */
+  --icon-gradient: linear-gradient(135deg, #2D7A8A 0%, #5A4A6A 100%);
+  --icon-color: #FFFFFF;
+  
+  /* Theme-aware Header Images */
+  --header-filter: brightness(0.8) contrast(1.1);
+  --header-opacity: 0.9;
+  --brain-filter: brightness(1.2) contrast(1.1);
+  --brain-color: #FFFFFF;
+  --logo-filter: brightness(1.1) contrast(1.1);
+  --logo-color: #FFFFFF;
+}
+
+/* Light Mode */
+[data-theme="light"] {
+  --background: #F8F9FA;         /* Heller Hintergrund */
+  --foreground: #1A1A2E;         /* Dunkle Schrift */
+  --primary: #2D7A8A;            /* Napolill Teal */
+  --secondary: #5A4A6A;          /* Lila Akzent */
+  --accent: #FF6B6B;             /* Kräftiger Akzent */
   --glass-bg: rgba(0, 0, 0, 0.05);
   --glass-border: rgba(0, 0, 0, 0.1);
   --card-bg: rgba(0, 0, 0, 0.02);
   --card-border: rgba(0, 0, 0, 0.05);
   --button-bg: var(--primary-teal);
   --button-text: #FFFFFF;
-  
-  /* Dark Mode Filter Layers - Elegant & Sophisticated */
-  --header-filter-1: linear-gradient(135deg, rgba(26, 26, 46, 0.15) 0%, rgba(22, 33, 62, 0.10) 100%);
-  --header-filter-2: linear-gradient(45deg, rgba(22, 33, 62, 0.10) 0%, rgba(15, 52, 96, 0.15) 100%);
-  --header-filter-3: linear-gradient(90deg, rgba(26, 26, 46, 0.08) 0%, rgba(15, 52, 96, 0.10) 100%);
   --footer-filter: linear-gradient(135deg, rgba(248, 249, 250, 0.98) 0%, rgba(26, 26, 46, 0.95) 50%, rgba(22, 33, 62, 0.98) 100%);
+  
+  /* Theme-aware Icon Gradients */
+  --icon-gradient: linear-gradient(135deg, #B8E0E8 0%, #D4C4DC 100%);
+  --icon-color: #1A1A2E;
+  
+  /* Theme-aware Header Images */
+  --header-filter: brightness(1.1) contrast(0.9);
+  --header-opacity: 0.8;
+  --brain-filter: brightness(0.8) contrast(1.1);
+  --brain-color: #1A1A2E;
+  --logo-filter: brightness(0);
+  --logo-color: #1A1A2E;
 }
 
-/* Light Mode - Midnight Elegance */
-[data-theme="light"] {
-  --background: #F8F9FA;
-  --foreground: #FFFFFF;
-  --primary: #FFFFFF;      /* Weiß statt Midnight */
-  --secondary: #FFFFFF;     /* Weiß statt Navy */
-  --accent: #FFFFFF;        /* Weiß statt Blau */
-  --glass-bg: rgba(0, 0, 0, 0.05);
-  --glass-border: rgba(0, 0, 0, 0.1);
-  --card-bg: rgba(0, 0, 0, 0.02);
-  --card-border: rgba(0, 0, 0, 0.05);
-  --button-bg: var(--primary);
-  --button-text: #FFFFFF;
-  
-  /* Light Mode Filter Layers - Elegant & Sophisticated */
-  --header-filter-1: linear-gradient(135deg, rgba(26, 26, 46, 0.15) 0%, rgba(22, 33, 62, 0.10) 100%);
-  --header-filter-2: linear-gradient(45deg, rgba(22, 33, 62, 0.10) 0%, rgba(15, 52, 96, 0.15) 100%);
-  --header-filter-3: linear-gradient(90deg, rgba(26, 26, 46, 0.08) 0%, rgba(15, 52, 96, 0.10) 100%);
-  --footer-filter: linear-gradient(135deg, rgba(248, 249, 250, 0.98) 0%, rgba(26, 26, 46, 0.95) 50%, rgba(22, 33, 62, 0.98) 100%);
-}
-
-/* Theme inline entfernt - nicht standard CSS */
 
 /* Global Styles */
 * {
@@ -92,9 +87,9 @@ html {
 }
 
 body {
-  background: var(--background-dark);
+  background: var(--background);
   background-image: linear-gradient(135deg, rgba(45, 122, 138, 0.05) 0%, rgba(90, 74, 106, 0.05) 50%, rgba(255, 179, 179, 0.05) 100%);
-  color: #FFFFFF;
+  color: var(--foreground);
   font-family: var(--font-poppins);
   line-height: 1.8;
   overflow-x: hidden;
@@ -165,27 +160,27 @@ html, body {
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--secondary-purple);
+  background: var(--background);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--primary-teal);
+  background: var(--primary);
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--accent-rose);
+  background: var(--accent);
 }
 
 /* Selection */
 ::selection {
-  background: var(--accent-rose);
-  color: var(--text-dark);
+  background: var(--accent);
+  color: var(--foreground);
 }
 
 /* Focus Styles */
 *:focus-visible {
-  outline: 2px solid var(--accent-rose);
+  outline: 2px solid var(--accent);
   outline-offset: 2px;
 }
 

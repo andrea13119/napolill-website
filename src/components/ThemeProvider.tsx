@@ -15,10 +15,20 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
   const [theme, setTheme] = useState<Theme>('dark');
 
   useEffect(() => {
-    // Check for saved theme preference or default to dark
-    const savedTheme = localStorage.getItem('napolill-theme') as Theme;
-    if (savedTheme) {
-      setTheme(savedTheme);
+    const THEME_VERSION = '2.0'; // Neue Version nach CSS-Fix
+    const savedVersion = localStorage.getItem('napolill-theme-version');
+    
+    if (savedVersion !== THEME_VERSION) {
+      // Old theme data, clear it
+      localStorage.removeItem('napolill-theme');
+      localStorage.setItem('napolill-theme-version', THEME_VERSION);
+      setTheme('dark'); // Reset to default DARK
+    } else {
+      // Load saved theme
+      const savedTheme = localStorage.getItem('napolill-theme') as Theme;
+      if (savedTheme) {
+        setTheme(savedTheme);
+      }
     }
   }, []);
 

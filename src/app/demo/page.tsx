@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion';
 import { ArrowLeft, Play, Zap, Heart, Trophy, Brain } from 'lucide-react';
 import { Layout } from '@/components/Layout';
+import { NapolillLogo } from '@/components/NapolillLogo';
 import { SolfeggioPlayer } from '@/components/SolfeggioPlayer';
 import { MoodSelector } from '@/components/MoodSelector';
 import { AffirmationsGenerator } from '@/components/AffirmationsGenerator';
@@ -62,39 +63,30 @@ export default function DemoPage() {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="relative py-20 bg-napolill-gradient overflow-hidden">
+      <section className="relative min-h-[50vh] bg-napolill-gradient overflow-hidden flex items-center justify-center">
         <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10" />
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="text-center"
+            className="text-center flex flex-col items-center justify-center min-h-[50vh]"
           >
-            <Link href="/" className="inline-flex items-center text-white/70 hover:text-white mb-6 transition-colors">
+            <Link href="/" className="inline-flex items-center text-foreground/70 hover:text-foreground mb-6 transition-colors">
               <ArrowLeft className="w-4 h-4 mr-2" />
               Zurück zur Startseite
             </Link>
             
-            <div className="flex items-center justify-center mb-6">
-              <div className="w-16 h-16 rounded-xl overflow-hidden bg-white/10 p-2">
-                <img 
-                  src="/images/icons/logo_napolill.png" 
-                  alt="Napolill Logo" 
-                  className="w-full h-full object-contain"
-                />
-              </div>
-            </div>
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+            <h1 className="text-5xl md:text-6xl font-bold text-foreground mb-6">
               Napolill Demo
             </h1>
 
-            <p className="text-xl md:text-2xl text-white/90 max-w-4xl mx-auto mb-8">
+            <p className="text-xl md:text-2xl text-foreground/90 max-w-4xl mx-auto mb-8">
               Teste die interaktiven Features der Napolill App direkt im Browser. 
               Erlebe die Kraft der Solfeggio-Frequenzen und erstelle deine eigenen Affirmationen.
             </p>
 
-            <div className="flex items-center justify-center space-x-8 text-white/70 text-sm">
+            <div className="flex items-center justify-center space-x-8 text-foreground/70 text-sm">
               <div className="flex items-center">
                 <Play className="w-4 h-4 mr-2" />
                 Interaktiv
@@ -147,7 +139,7 @@ export default function DemoPage() {
                 >
                   <div className="flex items-start space-x-6">
                     <div className={`w-16 h-16 ${feature.color} rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform`}>
-                      <feature.icon className="w-8 h-8 text-white" />
+                      <feature.icon className="w-8 h-8 text-[var(--icon-color)]" />
                     </div>
                     <div className="flex-1">
                       <h3 className="text-2xl font-bold text-foreground mb-3 group-hover:text-accent-rose transition-colors">
@@ -220,8 +212,8 @@ export default function DemoPage() {
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
               <div className="text-center">
-                <div className="w-16 h-16 bg-napolill-gradient rounded-xl flex items-center justify-center mx-auto mb-4">
-                  <Zap className="w-8 h-8 text-white" />
+                <div className="w-16 h-16 bg-icon-gradient rounded-xl flex items-center justify-center mx-auto mb-4">
+                  <Zap className="w-8 h-8 text-[var(--icon-color)]" />
                 </div>
                 <h3 className="text-xl font-semibold text-foreground mb-2">
                   Vollständige App
@@ -232,8 +224,8 @@ export default function DemoPage() {
               </div>
               
               <div className="text-center">
-                <div className="w-16 h-16 bg-napolill-gradient rounded-xl flex items-center justify-center mx-auto mb-4">
-                  <Brain className="w-8 h-8 text-white" />
+                <div className="w-16 h-16 bg-icon-gradient rounded-xl flex items-center justify-center mx-auto mb-4">
+                  <Brain className="w-8 h-8 text-[var(--icon-color)]" />
                 </div>
                 <h3 className="text-xl font-semibold text-foreground mb-2">
                   Persönliche Daten
@@ -244,8 +236,8 @@ export default function DemoPage() {
               </div>
               
               <div className="text-center">
-                <div className="w-16 h-16 bg-napolill-gradient rounded-xl flex items-center justify-center mx-auto mb-4">
-                  <Trophy className="w-8 h-8 text-white" />
+                <div className="w-16 h-16 bg-icon-gradient rounded-xl flex items-center justify-center mx-auto mb-4">
+                  <Trophy className="w-8 h-8 text-[var(--icon-color)]" />
                 </div>
                 <h3 className="text-xl font-semibold text-foreground mb-2">
                   Langzeit-Fortschritt
