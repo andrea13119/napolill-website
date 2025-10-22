@@ -43,7 +43,7 @@
 /* Dark Mode */
 [data-theme="dark"] {
   --background: #1A1A2E;        /* Dunkler Hintergrund */
-  --foreground: #FFFFFF;         /* Helle Schrift */
+  --foreground: #F5F5F7;         /* Starke, aber elegante Schrift */
   --primary: #2D7A8A;            /* Napolill Teal */
   --secondary: #5A4A6A;          /* Lila Akzent */
   --accent: #FFB3B3;             /* Rose Akzent */
@@ -57,7 +57,7 @@
   
   /* Theme-aware Icon Gradients */
   --icon-gradient: linear-gradient(135deg, #2D7A8A 0%, #5A4A6A 100%);
-  --icon-color: #FFFFFF;
+  --icon-color: #F5F5F7;
   
   /* Theme-aware Header Images */
   --header-filter: brightness(0.8) contrast(1.1);
@@ -158,34 +158,34 @@ html, body {
   overflow-x: hidden;
 }
 
-/* Mobile-optimierte Abstände */
+/* Mobile-optimierte Abstände - VERGRÖSSERT */
 .section-spacing {
-  padding: 6rem 0;
+  padding: 8rem 0;
 }
 
 @media (min-width: 768px) {
   .section-spacing {
-    padding: 8rem 0;
+    padding: 10rem 0;
   }
 }
 
 .card-spacing {
-  padding: 2rem;
+  padding: 3rem;
 }
 
 @media (min-width: 768px) {
   .card-spacing {
-    padding: 2.5rem;
+    padding: 4rem;
   }
 }
 
 .text-spacing > * + * {
-  margin-top: 1.5rem;
+  margin-top: 2.5rem;
 }
 
 @media (min-width: 768px) {
   .text-spacing > * + * {
-    margin-top: 2rem;
+    margin-top: 3rem;
   }
 }
 
@@ -194,9 +194,13 @@ html, body {
   position: relative;
   transform-style: preserve-3d;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  box-shadow: var(--button-shadow);
-  border-radius: 12px;
+  box-shadow: 0 4px 14px 0 rgba(0, 0, 0, 0.1),
+              0 2px 6px 0 rgba(0, 0, 0, 0.08);
+  border-radius: 10px;
+  font-weight: 600;
+  letter-spacing: 0.01em;
   overflow: hidden;
+  padding: 1rem 2rem !important;
 }
 
 .modern-button-3d::before {
@@ -206,29 +210,30 @@ html, body {
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 50%, rgba(0, 0, 0, 0.05) 100%);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.08) 50%, rgba(0, 0, 0, 0.08) 100%);
   border-radius: inherit;
   pointer-events: none;
   transition: opacity 0.3s ease;
 }
 
 .modern-button-3d:hover {
-  transform: translateY(-2px) scale(1.02);
-  box-shadow: var(--button-shadow-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px 0 rgba(0, 0, 0, 0.15),
+              0 4px 12px 0 rgba(0, 0, 0, 0.1);
 }
 
 .modern-button-3d:hover::before {
-  opacity: 0.8;
+  opacity: 0.9;
 }
 
 .modern-button-3d:active {
-  transform: translateY(0) scale(0.98);
-  box-shadow: var(--button-shadow-active);
+  transform: translateY(0);
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.1);
   transition: all 0.1s ease;
 }
 
 .modern-button-3d:active::before {
-  opacity: 0.6;
+  opacity: 0.7;
 }
 
 /* Outline Button 3D Effects */
@@ -353,14 +358,14 @@ html, body {
   }
 }
 
-/* Modern Spacing System */
+/* Modern Spacing System - VERGRÖSSERT */
 .space-y-modern > * + * {
-  margin-top: 2rem;
+  margin-top: 3rem;
 }
 
 @media (max-width: 767px) {
   .space-y-modern > * + * {
-    margin-top: 1.5rem;
+    margin-top: 2.5rem;
   }
 }
 
@@ -382,30 +387,65 @@ html, body {
 
 /* Modern Button Styling */
 .modern-button {
-  border-radius: 16px;
+  border-radius: 10px;
   font-weight: 600;
   letter-spacing: 0.01em;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.08),
+              0 1px 4px 0 rgba(0, 0, 0, 0.06);
+  padding: 1rem 2rem !important;
 }
 
 .modern-button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px 0 rgba(0, 0, 0, 0.12),
+              0 3px 8px 0 rgba(0, 0, 0, 0.08);
 }
 
 /* Enhanced Visual Hierarchy */
 .visual-hierarchy {
   background: linear-gradient(135deg, rgba(33, 79, 91, 0.1) 0%, rgba(45, 38, 64, 0.1) 100%);
   border-radius: 32px;
-  padding: 3rem;
-  margin: 2rem 0;
+  padding: 4rem;
+  margin: 3rem 0;
 }
 
 @media (max-width: 767px) {
   .visual-hierarchy {
-    padding: 2rem 1.5rem;
-    margin: 1.5rem 0;
+    padding: 3rem 2rem;
+    margin: 2.5rem 0;
+  }
+}
+
+/* VERGRÖSSERTE ABSTÄNDE FÜR ALLE ELEMENTE */
+h1 + p, h2 + p, h3 + p {
+  margin-top: 2rem !important;
+}
+
+@media (min-width: 768px) {
+  h1 + p, h2 + p, h3 + p {
+    margin-top: 2.5rem !important;
+  }
+}
+
+p + div, p + section, p + .flex {
+  margin-top: 2rem !important;
+}
+
+@media (min-width: 768px) {
+  p + div, p + section, p + .flex {
+    margin-top: 2.5rem !important;
+  }
+}
+
+/* Abstände zwischen Buttons und anderen Elementen */
+.flex + p, .flex + h1, .flex + h2, .flex + h3 {
+  margin-top: 2.5rem !important;
+}
+
+@media (min-width: 768px) {
+  .flex + p, .flex + h1, .flex + h2, .flex + h3 {
+    margin-top: 3rem !important;
   }
 }
 
