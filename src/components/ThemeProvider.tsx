@@ -35,6 +35,14 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
   useEffect(() => {
     // Apply theme to document
     document.documentElement.setAttribute('data-theme', theme);
+    
+    // AUCH die .dark Klasse setzen für Tailwind
+    if (theme === 'dark') {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+    
     localStorage.setItem('napolill-theme', theme);
   }, [theme]);
 

@@ -171,7 +171,6 @@ export function SolfeggioPlayer() {
           
           <Button
             onClick={toggleMute}
-            variant="outline"
             size="lg"
             className="w-12 h-12 rounded-full"
           >
@@ -184,7 +183,6 @@ export function SolfeggioPlayer() {
           
           <Button
             onClick={resetPlayer}
-            variant="outline"
             size="lg"
             className="w-12 h-12 rounded-full"
           >

@@ -661,7 +661,7 @@ export default function PrivacyPage() {
                     Du möchtest wissen, welche Daten wir über dich gespeichert haben? 
                     Fordere eine Kopie deiner Daten an.
                   </p>
-                  <Button variant="outline" size="lg" className="w-full border-accent-rose/40 text-accent-rose hover:bg-accent-rose/10">
+                  <Button size="lg" className="w-full">
                     <Download className="w-5 h-5 mr-2" />
                     Daten anfordern
                   </Button>

@@ -238,7 +238,7 @@ export default function NewsPage() {
                     </div>
 
                     {/* Read More Button */}
-                    <Button variant="outline" size="sm" className="w-full">
+                    <Button size="sm" className="w-full">
                       Weiterlesen
                       <ArrowRight className="w-4 h-4 ml-2" />
                     </Button>

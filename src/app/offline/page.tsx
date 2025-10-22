@@ -59,7 +59,6 @@ export default function OfflinePage() {
               
               <Button
                 onClick={checkConnection}
-                variant="outline"
                 size="lg"
               >
                 <Wifi className="w-5 h-5 mr-2" />
@@ -68,7 +67,6 @@ export default function OfflinePage() {
               
               <Link href="/">
                 <Button
-                  variant="outline"
                   size="lg"
                   className="w-full sm:w-auto"
                 >

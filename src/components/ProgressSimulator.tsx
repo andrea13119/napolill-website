@@ -254,7 +254,6 @@ export function ProgressSimulator() {
             <h3 className="text-2xl font-bold text-foreground">Badges & Achievements</h3>
             <Button
               onClick={() => setShowAllBadges(!showAllBadges)}
-              variant="outline"
               size="sm"
             >
               {showAllBadges ? 'Nur freigeschaltete' : 'Alle anzeigen'}

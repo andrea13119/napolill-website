@@ -209,7 +209,6 @@ export function AffirmationsGenerator() {
           </Button>
           <Button
             onClick={generateRandomTemplate}
-            variant="outline"
             size="lg"
           >
             <RefreshCw className="w-5 h-5 mr-2" />

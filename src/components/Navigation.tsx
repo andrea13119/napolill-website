@@ -61,7 +61,7 @@ export function Navigation() {
 
           {/* Desktop Actions */}
           <div className="hidden lg:flex items-center space-x-3">
-            <Button variant="outline" size="sm" className="text-sm h-12">
+            <Button size="sm" className="text-sm h-12">
               <Download className="w-5 h-5 mr-2" />
               Download
             </Button>

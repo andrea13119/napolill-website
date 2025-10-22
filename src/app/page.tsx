@@ -177,7 +177,7 @@ export default function Home() {
               {/* CTA Button - Verbessertes Styling */}
               <motion.div variants={itemVariants} className="mt-14">
                 <Button 
-                  className="bg-gradient-to-r from-primary via-accent to-secondary hover:from-primary/90 hover:via-accent/90 hover:to-secondary/90 text-button-text font-bold text-lg px-10 py-5 rounded-2xl shadow-2xl hover:shadow-primary/25 transition-all duration-300 hover:scale-105 border-2 border-foreground/20 hover:border-foreground/40"
+                  className="bg-gradient-to-r from-primary via-accent to-secondary hover:from-primary/90 hover:via-accent/90 hover:to-secondary/90 text-button-text font-bold text-lg px-10 py-5 rounded-2xl shadow-2xl hover:shadow-primary/25 transition-all duration-300 hover:scale-105"
                   size="lg"
                 >
                   NAPOLILL KOSTENLOS TESTEN

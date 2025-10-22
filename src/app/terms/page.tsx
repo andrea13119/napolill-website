@@ -340,7 +340,7 @@ export default function TermsPage() {
                 <Scale className="w-5 h-5 mr-2" />
                 Rechtliches kontaktieren
               </Button>
-              <Button variant="outline" size="lg">
+              <Button size="lg">
                 <FileText className="w-5 h-5 mr-2" />
                 AGB herunterladen
               </Button>

@@ -251,14 +251,14 @@ export default function DemoPage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/app"
-                className="inline-flex items-center px-8 py-4 bg-gray-900 text-white rounded-lg font-semibold hover:opacity-90 transition-opacity modern-button-3d dark:bg-white dark:text-gray-900"
+                className="inline-flex items-center px-8 py-4 bg-gray-900 text-white rounded-lg font-semibold hover:opacity-90 transition-opacity modern-button-3d"
               >
                 <Play className="w-5 h-5 mr-2" />
                 App entdecken
               </Link>
               <Link
                 href="/science"
-                className="inline-flex items-center px-8 py-4 bg-gray-900 text-white rounded-lg font-semibold hover:opacity-90 transition-opacity modern-button-3d dark:bg-gray-900 dark:text-white"
+                className="inline-flex items-center px-8 py-4 bg-gray-900 text-white rounded-lg font-semibold hover:opacity-90 transition-opacity modern-button-3d"
               >
                 <Brain className="w-5 h-5 mr-2" />
                 Wissenschaft erfahren

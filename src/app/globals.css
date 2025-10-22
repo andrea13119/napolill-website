@@ -18,6 +18,28 @@
   --font-poppins: 'Poppins', sans-serif;
 }
 
+/* Dark Mode Button Override - FORCE WHITE BUTTONS IN DARK MODE */
+[data-theme="dark"] .modern-button-3d {
+  background-color: #FFFFFF !important;
+  color: #1A1A2E !important;
+}
+
+[data-theme="dark"] .modern-button-3d:hover {
+  background-color: #F8F9FA !important;
+  color: #1A1A2E !important;
+}
+
+/* ALLE Standard-Buttons - Dark Mode */
+[data-theme="dark"] .modern-button {
+  background-color: #FFFFFF !important;
+  color: #1A1A2E !important;
+}
+
+[data-theme="dark"] .modern-button:hover {
+  background-color: #F8F9FA !important;
+  color: #1A1A2E !important;
+}
+
 /* Dark Mode */
 [data-theme="dark"] {
   --background: #1A1A2E;        /* Dunkler Hintergrund */

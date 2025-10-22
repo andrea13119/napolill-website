@@ -62,7 +62,6 @@ export default function NotFound() {
               
               <Button
                 onClick={() => window.history.back()}
-                variant="outline"
                 size="lg"
                 className="w-full sm:w-auto"
               >

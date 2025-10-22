@@ -294,15 +294,15 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
               Teile diesen Artikel
             </h3>
             <div className="flex justify-center space-x-4">
-              <Button variant="outline" size="sm">
+              <Button size="sm">
                 <Share2 className="w-4 h-4 mr-2" />
                 Facebook
               </Button>
-              <Button variant="outline" size="sm">
+              <Button size="sm">
                 <Share2 className="w-4 h-4 mr-2" />
                 Twitter
               </Button>
-              <Button variant="outline" size="sm">
+              <Button size="sm">
                 <Share2 className="w-4 h-4 mr-2" />
                 LinkedIn
               </Button>

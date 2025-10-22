@@ -170,7 +170,7 @@ export default function SciencePage() {
                     </div>
 
                     <Link href={area.link}>
-                      <Button variant="outline" className="w-full">
+                      <Button className="w-full">
                         Mehr erfahren
                         <ArrowRight className="w-4 h-4 ml-2" />
                       </Button>
@@ -420,7 +420,7 @@ export default function SciencePage() {
               Erlebe selbst, wie wissenschaftliche Erkenntnisse in eine 
               praktische, benutzerfreundliche App umgesetzt werden.
             </p>
-            <Button size="lg" className="bg-gray-900 text-white hover:opacity-90 text-lg px-8 py-4 modern-button-3d dark:bg-white dark:text-gray-900">
+            <Button size="lg" className="bg-gray-900 text-white hover:opacity-90 text-lg px-8 py-4 modern-button-3d">
               <Brain className="w-5 h-5 mr-2" />
               App jetzt testen
             </Button>

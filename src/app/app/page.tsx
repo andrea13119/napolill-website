@@ -180,11 +180,11 @@ export default function AppPage() {
               Solfeggio-Frequenzen für maximale Gehirn-Reprogrammierung.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-gray-900 text-white hover:opacity-90 modern-button-3d dark:bg-white dark:text-gray-900">
+              <Button size="lg" className="bg-gray-900 text-white hover:opacity-90 modern-button-3d">
                 <Download className="w-5 h-5 mr-2" />
                 Jetzt Downloaden
               </Button>
-              <Button size="lg" className="bg-gray-900 text-white hover:opacity-90 modern-button-3d dark:bg-gray-900 dark:text-white">
+              <Button size="lg" className="bg-gray-900 text-white hover:opacity-90 modern-button-3d">
                 <Play className="w-5 h-5 mr-2" />
                 Demo Video
               </Button>
@@ -442,11 +442,11 @@ export default function AppPage() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-              <Button size="lg" className="bg-gray-900 text-white hover:opacity-90 text-lg px-8 py-4 modern-button-3d dark:bg-white dark:text-gray-900">
+              <Button size="lg" className="bg-gray-900 text-white hover:opacity-90 text-lg px-8 py-4 modern-button-3d">
                 <Smartphone className="w-5 h-5 mr-2" />
                 Google Play Store
               </Button>
-              <Button size="lg" className="bg-gray-900 text-white hover:opacity-90 text-lg px-8 py-4 modern-button-3d dark:bg-white dark:text-gray-900">
+              <Button size="lg" className="bg-gray-900 text-white hover:opacity-90 text-lg px-8 py-4 modern-button-3d">
                 <Smartphone className="w-5 h-5 mr-2" />
                 Apple App Store
               </Button>

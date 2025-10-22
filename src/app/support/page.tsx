@@ -198,7 +198,7 @@ export default function SupportPage() {
                     <p className="text-xs text-foreground/60 mb-6">
                       {option.availability}
                     </p>
-                    <Button variant="outline" size="sm" className="w-full">
+                    <Button  size="sm" className="w-full">
                       {option.action}
                     </Button>
                   </CardContent>
@@ -425,7 +425,7 @@ export default function SupportPage() {
                 <p className="text-foreground/70 text-sm mb-6">
                   Finde Antworten auf die häufigsten Fragen
                 </p>
-                <Button variant="outline" className="w-full">
+                <Button  className="w-full">
                   FAQ durchsuchen
                 </Button>
               </CardContent>
@@ -440,7 +440,7 @@ export default function SupportPage() {
                 <p className="text-foreground/70 text-sm mb-6">
                   Umfassende Artikel und Anleitungen
                 </p>
-                <Button variant="outline" className="w-full">
+                <Button  className="w-full">
                   Artikel durchsuchen
                 </Button>
               </CardContent>
@@ -455,7 +455,7 @@ export default function SupportPage() {
                 <p className="text-foreground/70 text-sm mb-6">
                   Tausche dich mit anderen Nutzern aus
                 </p>
-                <Button variant="outline" className="w-full">
+                <Button  className="w-full">
                   Community besuchen
                 </Button>
               </CardContent>
