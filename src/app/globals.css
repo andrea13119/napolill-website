@@ -29,8 +29,8 @@
   --glass-border: rgba(255, 255, 255, 0.1);
   --card-bg: rgba(255, 255, 255, 0.02);
   --card-border: rgba(255, 255, 255, 0.05);
-  --button-bg: var(--primary-teal);
-  --button-text: #FFFFFF;
+  --button-bg: #FFFFFF;
+  --button-text: #1A1A2E;
   --footer-filter: linear-gradient(135deg, rgba(10, 10, 15, 0.95) 0%, rgba(26, 26, 46, 0.90) 50%, rgba(22, 33, 62, 0.95) 100%);
   
   /* Theme-aware Icon Gradients */
@@ -44,6 +44,19 @@
   --brain-color: #FFFFFF;
   --logo-filter: brightness(1.1) contrast(1.1);
   --logo-color: #FFFFFF;
+  
+  /* Theme-aware Hero Buttons */
+  --button-hero-bg: #FFFFFF;
+  --button-hero-text: #1A1A2E;
+  --button-hero-border: rgba(248, 249, 250, 0.3);
+  --button-outline-border: rgba(248, 249, 250, 0.3);
+  --button-outline-text: #1A1A2E;
+  --button-outline-hover-bg: rgba(248, 249, 250, 0.1);
+  
+  /* 3D Button Effects */
+  --button-shadow: 0 8px 25px rgba(26, 26, 46, 0.2), 0 3px 10px rgba(26, 26, 46, 0.15);
+  --button-shadow-hover: 0 12px 35px rgba(26, 26, 46, 0.25), 0 5px 15px rgba(26, 26, 46, 0.2);
+  --button-shadow-active: 0 4px 15px rgba(26, 26, 46, 0.15), 0 2px 5px rgba(26, 26, 46, 0.1);
 }
 
 /* Light Mode */
@@ -57,8 +70,8 @@
   --glass-border: rgba(0, 0, 0, 0.1);
   --card-bg: rgba(0, 0, 0, 0.02);
   --card-border: rgba(0, 0, 0, 0.05);
-  --button-bg: var(--primary-teal);
-  --button-text: #FFFFFF;
+  --button-bg: #1A1A2E;
+  --button-text: #F8F9FA;
   --footer-filter: linear-gradient(135deg, rgba(248, 249, 250, 0.98) 0%, rgba(26, 26, 46, 0.95) 50%, rgba(22, 33, 62, 0.98) 100%);
   
   /* Theme-aware Icon Gradients */
@@ -72,6 +85,19 @@
   --brain-color: #1A1A2E;
   --logo-filter: brightness(0);
   --logo-color: #1A1A2E;
+  
+  /* Theme-aware Hero Buttons */
+  --button-hero-bg: #1A1A2E;
+  --button-hero-text: #F8F9FA;
+  --button-hero-border: rgba(26, 26, 46, 0.3);
+  --button-outline-border: rgba(26, 26, 46, 0.3);
+  --button-outline-text: #F8F9FA;
+  --button-outline-hover-bg: rgba(26, 26, 46, 0.1);
+  
+  /* 3D Button Effects */
+  --button-shadow: 0 8px 25px rgba(248, 249, 250, 0.2), 0 3px 10px rgba(248, 249, 250, 0.15);
+  --button-shadow-hover: 0 12px 35px rgba(248, 249, 250, 0.25), 0 5px 15px rgba(248, 249, 250, 0.2);
+  --button-shadow-active: 0 4px 15px rgba(248, 249, 250, 0.15), 0 2px 5px rgba(248, 249, 250, 0.1);
 }
 
 
@@ -141,7 +167,90 @@ html, body {
   }
 }
 
-/* Glasmorphism Utilities - Theme Aware */
+/* Modern 3D Button Styles */
+.modern-button-3d {
+  position: relative;
+  transform-style: preserve-3d;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: var(--button-shadow);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.modern-button-3d::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 50%, rgba(0, 0, 0, 0.05) 100%);
+  border-radius: inherit;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.modern-button-3d:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: var(--button-shadow-hover);
+}
+
+.modern-button-3d:hover::before {
+  opacity: 0.8;
+}
+
+.modern-button-3d:active {
+  transform: translateY(0) scale(0.98);
+  box-shadow: var(--button-shadow-active);
+  transition: all 0.1s ease;
+}
+
+.modern-button-3d:active::before {
+  opacity: 0.6;
+}
+
+/* Outline Button 3D Effects */
+.modern-button-outline-3d {
+  position: relative;
+  transform-style: preserve-3d;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  overflow: hidden;
+}
+
+.modern-button-outline-3d::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.02) 50%, rgba(0, 0, 0, 0.02) 100%);
+  border-radius: inherit;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.modern-button-outline-3d:hover {
+  transform: translateY(-1px) scale(1.01);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.modern-button-outline-3d:hover::before {
+  opacity: 0.7;
+}
+
+.modern-button-outline-3d:active {
+  transform: translateY(0) scale(0.99);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.1s ease;
+}
+
+.modern-button-outline-3d:active::before {
+  opacity: 0.5;
+}
 .glass {
   background: var(--glass-bg);
   backdrop-filter: blur(10px);

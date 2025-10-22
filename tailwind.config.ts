@@ -43,6 +43,9 @@ const config: Config = {
         button: {
           bg: "var(--button-bg)",
           text: "var(--button-text)",
+          "hero-bg": "var(--button-hero-bg)",
+          "hero-text": "var(--button-hero-text)",
+          "outline-text": "var(--button-outline-text)",
         },
       },
       fontFamily: {

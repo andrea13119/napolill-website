@@ -214,8 +214,8 @@ export default function SciencePage() {
                 <Card variant="glass" hover className="h-full">
                   <CardContent className="p-6">
                     <div className="flex items-center space-x-4 mb-4">
-                      <div className="w-12 h-12 bg-napolill-gradient rounded-lg flex items-center justify-center">
-                        <Zap className="w-6 h-6 text-white" />
+                      <div className="w-12 h-12 bg-icon-gradient rounded-lg flex items-center justify-center">
+                        <Zap className="w-6 h-6 text-[var(--icon-color)]" />
                       </div>
                       <div>
                         <h3 className="text-lg font-bold text-foreground">{freq.frequency}</h3>
@@ -420,7 +420,7 @@ export default function SciencePage() {
               Erlebe selbst, wie wissenschaftliche Erkenntnisse in eine 
               praktische, benutzerfreundliche App umgesetzt werden.
             </p>
-            <Button size="lg" className="bg-white text-primary-teal hover:bg-white/90 text-lg px-8 py-4">
+            <Button size="lg" className="bg-gray-900 text-white hover:opacity-90 text-lg px-8 py-4 modern-button-3d dark:bg-white dark:text-gray-900">
               <Brain className="w-5 h-5 mr-2" />
               App jetzt testen
             </Button>

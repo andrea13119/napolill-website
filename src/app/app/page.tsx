@@ -111,14 +111,14 @@ function ScreenshotCarousel() {
         {/* Navigation Arrows */}
         <button
           onClick={prevSlide}
-          className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-white/30 transition-all duration-300"
+          className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-[var(--button-outline-hover-bg)] backdrop-blur-sm rounded-full flex items-center justify-center text-button-outline-text hover:bg-[var(--button-outline-border)] transition-all duration-300"
           aria-label="Vorheriges Screenshot"
         >
           <ChevronLeft className="w-6 h-6" />
         </button>
         <button
           onClick={nextSlide}
-          className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-white/30 transition-all duration-300"
+          className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-[var(--button-outline-hover-bg)] backdrop-blur-sm rounded-full flex items-center justify-center text-button-outline-text hover:bg-[var(--button-outline-border)] transition-all duration-300"
           aria-label="Nächstes Screenshot"
         >
           <ChevronRight className="w-6 h-6" />
@@ -180,11 +180,11 @@ export default function AppPage() {
               Solfeggio-Frequenzen für maximale Gehirn-Reprogrammierung.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-white text-primary-teal hover:bg-white/90">
+              <Button size="lg" className="bg-gray-900 text-white hover:opacity-90 modern-button-3d dark:bg-white dark:text-gray-900">
                 <Download className="w-5 h-5 mr-2" />
                 Jetzt Downloaden
               </Button>
-              <Button variant="outline" size="lg" className="border-white/30 text-white hover:bg-white hover:text-primary-teal">
+              <Button size="lg" className="bg-gray-900 text-white hover:opacity-90 modern-button-3d dark:bg-gray-900 dark:text-white">
                 <Play className="w-5 h-5 mr-2" />
                 Demo Video
               </Button>
@@ -442,11 +442,11 @@ export default function AppPage() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-              <Button size="lg" className="bg-white text-primary-teal hover:bg-white/90 text-lg px-8 py-4">
+              <Button size="lg" className="bg-gray-900 text-white hover:opacity-90 text-lg px-8 py-4 modern-button-3d dark:bg-white dark:text-gray-900">
                 <Smartphone className="w-5 h-5 mr-2" />
                 Google Play Store
               </Button>
-              <Button size="lg" className="bg-white text-primary-teal hover:bg-white/90 text-lg px-8 py-4">
+              <Button size="lg" className="bg-gray-900 text-white hover:opacity-90 text-lg px-8 py-4 modern-button-3d dark:bg-white dark:text-gray-900">
                 <Smartphone className="w-5 h-5 mr-2" />
                 Apple App Store
               </Button>
