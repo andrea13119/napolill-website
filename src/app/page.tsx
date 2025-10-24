@@ -107,119 +107,95 @@ export default function Home() {
   const [currentMode, setCurrentMode] = useState(0);
   const modes = ['Affirmationen', 'Entspannung', 'Fokus', 'Kreativität'];
   const [expandedFaq, setExpandedFaq] = useState<number | null>(null);
-  const [scrollOpacity, setScrollOpacity] = useState(1);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrolled = window.scrollY;
-      const maxScroll = window.innerHeight * 0.5; // Bei 50% des Viewports komplett verschwunden
-      const newOpacity = Math.max(0, 1 - (scrolled / maxScroll));
-      setScrollOpacity(newOpacity);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
 
   return (
     <Layout>
-      {/* Hero Section - Brain.fm Style */}
-      <section className="fixed top-0 left-0 right-0 min-h-screen flex items-center justify-center overflow-hidden bg-background z-0">
+      {/* Fixed Header Background - bleibt oben stehen */}
+      <div className="fixed top-0 left-0 right-0 min-h-screen z-0 overflow-hidden">
+        <WebsiteHeader variant="mobile" />
+        <WebsiteHeader variant="desktop" />
         
-        {/* Website Header Image - Background */}
-        <div className="absolute top-0 left-0 right-0 h-full overflow-hidden">
-          <WebsiteHeader variant="mobile" />
-          <WebsiteHeader variant="desktop" />
-          
-          
-          {/* Sanfter Übergang am oberen Rand */}
-          <div className="absolute top-0 left-0 right-0 h-20 bg-gradient-to-b from-background via-background/60 to-transparent pointer-events-none"></div>
-          
-          {/* Sanfter Übergang am unteren Rand mit Animation */}
-          <div className="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-t from-background via-background/95 to-transparent pointer-events-none">
-            {/* Animierter "Drüberfahren"-Effekt */}
-            <div className="absolute inset-0 bg-gradient-to-t from-background via-background/80 to-transparent opacity-0 animate-[fadeInUp_3s_ease-in-out_infinite]"></div>
-            {/* Zusätzlicher sanfter Übergang */}
-            <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-transparent"></div>
-          </div>
-          
-          {/* Gradient Overlay für sanften Übergang - entfernt da beide Bereiche gleichen Hintergrund haben */}
-          
-          {/* Content over Image */}
-          <div className="absolute inset-0 z-5 w-full text-center flex items-center justify-center transition-opacity duration-500" style={{opacity: scrollOpacity}}>
-          <motion.div
-            variants={containerVariants}
-            initial="hidden"
-            animate="visible"
-            className="space-y-8 w-full px-4 sm:px-6 lg:px-8"
-          >
-              {/* Main Title - Verbessertes Styling mit mehr Abständen */}
-              <motion.div variants={itemVariants} className="space-y-10">
-                <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold leading-tight">
-                  <span className="block text-[#2D7A8A] drop-shadow-2xl shadow-black/80 mb-4">DEINE STIMME</span>
-                  <span className="block bg-gradient-to-r from-[#2D7A8A] via-[#2D7A8A] to-[#2D7A8A] bg-clip-text text-transparent drop-shadow-lg shadow-black/60">
-                    DEIN NEUES SELBST
-                  </span>
-                </h1>
-                <p 
-                  className="text-lg sm:text-xl md:text-2xl max-w-4xl mx-auto leading-relaxed font-light text-foreground drop-shadow-xl shadow-black/70 text-center my-8"
-                  style={{
-                    maxWidth: '800px',
-                    marginTop: '40px',
-                    marginBottom: '40px',
-                    fontSize: '1.5rem'
-                  }}
-                >
-                  Trainiere täglich mit personalisierten Affirmationen und geführten Vorstellungsbildern, damit sich Stärke, Ruhe und Fokus zur Gewohnheit formen. Keine Floskeln. Nur Methoden, die Verhalten messbar verändern.
-                </p>
-              </motion.div>
-
-              {/* CTA Button - Verbessertes Styling */}
-              <motion.div variants={itemVariants} className="mt-14">
-                <Button 
-                  className="bg-gradient-to-r from-primary via-accent to-secondary hover:from-primary/90 hover:via-accent/90 hover:to-secondary/90 text-button-text font-bold text-lg px-10 py-5 rounded-2xl shadow-2xl hover:shadow-primary/25 transition-all duration-300 hover:scale-105"
-                  size="lg"
-                >
-                  NAPOLILL KOSTENLOS TESTEN
-                </Button>
-              </motion.div>
-
-              {/* Mode Navigation - Verbesserte Darstellung */}
-              <motion.div variants={itemVariants} className="mt-20" style={{marginTop: '60px'}}>
-                <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-8">
-                  <button className="text-foreground/60 hover:text-foreground transition-colors hidden sm:block">
-                    <ChevronLeft className="w-6 h-6" />
-                  </button>
-                  
-                  {/* Tags untereinander auf Mobile, nebeneinander auf Desktop - Größer */}
-                  <div className="grid grid-cols-1 sm:flex gap-4 sm:gap-4">
-                    {modes.map((mode, index) => (
-                      <button
-                        key={mode}
-                        onClick={() => setCurrentMode(index)}
-                        className={`px-6 py-4 sm:px-8 sm:py-4 rounded-xl font-semibold transition-all duration-300 text-base sm:text-lg min-w-[140px] ${
-                          currentMode === index
-                            ? 'bg-white text-black shadow-lg transform scale-105'
-                            : 'text-foreground/80 hover:text-foreground hover:bg-foreground/10 hover:scale-105'
-                        }`}
-                      >
-                        {mode}
-                      </button>
-                    ))}
-                  </div>
-                  
-                  <button className="text-foreground/60 hover:text-foreground transition-colors hidden sm:block">
-                    <ChevronRight className="w-6 h-6" />
-                  </button>
-                </div>
-              </motion.div>
-            </motion.div>
-              </div>
+        {/* Sanfter Übergang am oberen Rand */}
+        <div className="absolute top-0 left-0 right-0 h-20 bg-gradient-to-b from-background via-background/60 to-transparent pointer-events-none"></div>
+        
+        {/* Sanfter Übergang am unteren Rand mit Animation */}
+        <div className="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-t from-background via-background/95 to-transparent pointer-events-none">
+          {/* Animierter "Drüberfahren"-Effekt */}
+          <div className="absolute inset-0 bg-gradient-to-t from-background via-background/80 to-transparent opacity-0 animate-[fadeInUp_3s_ease-in-out_infinite]"></div>
+          {/* Zusätzlicher sanfter Übergang */}
+          <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-transparent"></div>
         </div>
-      </section>
+      </div>
 
-      {/* Spacer für fixed Header */}
-      <div className="h-screen"></div>
+      {/* Hero Text Section - scrollt normal mit dem Content */}
+      <section className="relative z-10 min-h-screen flex items-center justify-center overflow-hidden bg-background">
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+          className="space-y-8 w-full px-4 sm:px-6 lg:px-8 text-center"
+        >
+          {/* Main Title - Verbessertes Styling mit mehr Abständen */}
+          <motion.div variants={itemVariants} className="space-y-10">
+            <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold leading-tight">
+              <span className="block text-[#2D7A8A] drop-shadow-2xl shadow-black/80 mb-4">DEINE STIMME</span>
+              <span className="block bg-gradient-to-r from-[#2D7A8A] via-[#2D7A8A] to-[#2D7A8A] bg-clip-text text-transparent drop-shadow-lg shadow-black/60">
+                DEIN NEUES SELBST
+              </span>
+            </h1>
+            <p 
+              className="text-lg sm:text-xl md:text-2xl max-w-4xl mx-auto leading-relaxed font-light text-foreground drop-shadow-xl shadow-black/70 text-center my-8"
+              style={{
+                marginTop: '40px',
+                marginBottom: '40px',
+                fontSize: '1.5rem'
+              }}
+            >
+              Trainiere täglich mit personalisierten Affirmationen und geführten Vorstellungsbildern, damit sich Stärke, Ruhe und Fokus zur Gewohnheit formen. Keine Floskeln. Nur Methoden, die Verhalten messbar verändern.
+            </p>
+          </motion.div>
+
+          {/* CTA Button - Verbessertes Styling */}
+          <motion.div variants={itemVariants} className="mt-14">
+            <Button 
+              className="bg-gradient-to-r from-primary via-accent to-secondary hover:from-primary/90 hover:via-accent/90 hover:to-secondary/90 text-button-text font-bold text-lg px-10 py-5 rounded-2xl shadow-2xl hover:shadow-primary/25 transition-all duration-300 hover:scale-105"
+              size="lg"
+            >
+              NAPOLILL KOSTENLOS TESTEN
+            </Button>
+          </motion.div>
+
+          {/* Mode Navigation - Verbesserte Darstellung */}
+          <motion.div variants={itemVariants} className="mt-20" style={{marginTop: '60px'}}>
+            <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-8">
+              <button className="text-foreground/60 hover:text-foreground transition-colors hidden sm:block">
+                <ChevronLeft className="w-6 h-6" />
+              </button>
+              
+              {/* Tags untereinander auf Mobile, nebeneinander auf Desktop - Größer */}
+              <div className="grid grid-cols-1 sm:flex gap-4 sm:gap-4">
+                {modes.map((mode, index) => (
+                  <button
+                    key={mode}
+                    onClick={() => setCurrentMode(index)}
+                    className={`px-6 py-4 sm:px-8 sm:py-4 rounded-xl font-semibold transition-all duration-300 text-base sm:text-lg min-w-[140px] ${
+                      currentMode === index
+                        ? 'bg-white text-black shadow-lg transform scale-105'
+                        : 'text-foreground/80 hover:text-foreground hover:bg-foreground/10 hover:scale-105'
+                    }`}
+                  >
+                    {mode}
+                  </button>
+                ))}
+              </div>
+              
+              <button className="text-foreground/60 hover:text-foreground transition-colors hidden sm:block">
+                <ChevronRight className="w-6 h-6" />
+              </button>
+            </div>
+          </motion.div>
+        </motion.div>
+      </section>
 
       {/* Content Background Wrapper */}
       <div className="relative bg-background z-10">
