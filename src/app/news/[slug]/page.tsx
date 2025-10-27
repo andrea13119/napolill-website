@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion';
 import { Calendar, User, ArrowLeft, Clock, Share2, BookOpen } from 'lucide-react';
 import { Button } from '@/components/ui/Button';
-import { Layout } from '@/components/Layout';
+import { Layout } from '@/components/layout/Layout';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 

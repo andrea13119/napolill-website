@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion';
 import { ArrowLeft, Home, Search } from 'lucide-react';
 import { Button } from '@/components/ui/Button';
-import { Layout } from '@/components/Layout';
+import { Layout } from '@/components/layout/Layout';
 import Link from 'next/link';
 
 export default function NotFound() {

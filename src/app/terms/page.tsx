@@ -1,353 +1,169 @@
 'use client';
 
-import { motion } from 'framer-motion';
-import { FileText, Scale, ArrowLeft, CheckCircle, AlertTriangle } from 'lucide-react';
-import { Button } from '@/components/ui/Button';
-import { Layout } from '@/components/Layout';
-import Link from 'next/link';
-
-const importantPoints = [
-  {
-    icon: CheckCircle,
-    title: 'Kostenlose Nutzung',
-    description: 'Die Napolill App ist vollständig kostenlos und ohne versteckte Kosten.'
-  },
-  {
-    icon: Scale,
-    title: 'Transparente Bedingungen',
-    description: 'Klare und verständliche Geschäftsbedingungen ohne juristische Fallstricke.'
-  },
-  {
-    icon: AlertTriangle,
-    title: 'Keine Haftung',
-    description: 'Die App ersetzt keine professionelle medizinische oder psychologische Behandlung.'
-  }
-];
+import { FileText, Scale, CheckCircle, AlertTriangle, Users, Shield } from 'lucide-react';
+import { Layout } from '@/components/layout/Layout';
+import { LegalHeroSection } from '@/components/sections/legal/LegalHeroSection';
+import { LegalContentSection } from '@/components/sections/legal/LegalContentSection';
 
 export default function TermsPage() {
-  return (
-    <Layout>
-      {/* Hero Section */}
-      <section className="relative min-h-[50vh] bg-napolill-gradient overflow-hidden flex items-center justify-center">
-        <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10" />
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center flex flex-col items-center justify-center min-h-[50vh]"
-          >
-            <Link href="/" className="inline-flex items-center text-foreground/70 hover:text-foreground mb-6 transition-colors">
-              <ArrowLeft className="w-4 h-4 mr-2" />
-              Zurück zur Startseite
-            </Link>
-            
-            <h1 className="text-5xl md:text-6xl font-bold text-foreground mb-6">
-              Allgemeine Geschäftsbedingungen
-            </h1>
+  const heroInfo = [
+    { icon: CheckCircle, text: 'Kostenlose Nutzung' },
+    { icon: Scale, text: 'Transparente Bedingungen' },
+    { icon: Shield, text: 'Faire Regelungen' }
+  ];
 
-            <p className="text-xl md:text-2xl text-foreground/90 max-w-4xl mx-auto mb-8">
-              Die Nutzungsbedingungen für die Napolill App - 
-              einfach, fair und transparent.
-            </p>
-
-            <div className="flex items-center justify-center space-x-8 text-foreground/70 text-sm">
-              <div className="flex items-center">
-                <FileText className="w-4 h-4 mr-2" />
-                Aktualisiert: Januar 2024
-              </div>
-              <div className="flex items-center">
-                <Scale className="w-4 h-4 mr-2" />
-                DSGVO-konform
-              </div>
-              <div className="flex items-center">
-                <CheckCircle className="w-4 h-4 mr-2" />
-                Fair & Transparent
-              </div>
-            </div>
-          </motion.div>
+  const contentSections = [
+    {
+      id: 'geltungsbereich',
+      title: '1. Geltungsbereich',
+      icon: FileText,
+      content: (
+        <div className="space-y-4">
+          <p>Diese Allgemeinen Geschäftsbedingungen (AGB) gelten für die Nutzung der Napolill App und aller damit verbundenen Dienste.</p>
+          <div className="bg-secondary-purple/10 p-6 rounded-lg">
+            <p className="mb-3"><strong>Anbieter:</strong></p>
+            <p>Napolill</p>
+            <p>Beispielstraße 123</p>
+            <p>12345 Berlin, Deutschland</p>
+            <p className="mt-3"><strong>E-Mail:</strong> <a href="mailto:info@napolill.com" className="text-primary-teal hover:underline">info@napolill.com</a></p>
+          </div>
+          <p className="mt-4">Mit der Installation und Nutzung der App akzeptierst du diese AGB. Wenn du mit den Bedingungen nicht einverstanden bist, darfst du die App nicht nutzen.</p>
         </div>
-      </section>
+      )
+    },
+    {
+      id: 'nutzung',
+      title: '2. Nutzung der App',
+      icon: CheckCircle,
+      content: (
+        <div className="space-y-4">
+          <h4 className="font-semibold text-lg">2.1 Kostenlose Nutzung</h4>
+          <p>Die Napolill App ist vollständig kostenlos und ohne versteckte Kosten nutzbar. Es gibt keine In-App-Käufe oder Abonnements.</p>
+          
+          <h4 className="font-semibold text-lg mt-6">2.2 Nutzerverantwortung</h4>
+          <ul className="list-disc pl-6 space-y-2">
+            <li>Du bist für die ordnungsgemäße Nutzung der App verantwortlich</li>
+            <li>Die Nutzung erfolgt auf eigene Gefahr</li>
+            <li>Du verpflichtest dich, die App nicht missbräuchlich zu verwenden</li>
+            <li>Das Reverse Engineering oder die Dekompilierung der App ist untersagt</li>
+          </ul>
 
-      {/* Important Points */}
-      <section className="py-20 bg-background">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-              Das Wichtigste auf einen Blick
-            </h2>
-            <p className="text-xl text-foreground/70 max-w-3xl mx-auto">
-              Hier sind die wichtigsten Punkte unserer Geschäftsbedingungen 
-              zusammengefasst.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {importantPoints.map((point, index) => (
-              <motion.div
-                key={point.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="text-center"
-              >
-                <div className="w-20 h-20 bg-icon-gradient rounded-xl flex items-center justify-center mx-auto mb-6">
-                  <point.icon className="w-10 h-10 text-[var(--icon-color)]" />
-                </div>
-                <h3 className="text-xl font-semibold text-foreground mb-4">
-                  {point.title}
-                </h3>
-                <p className="text-foreground/70 leading-relaxed">
-                  {point.description}
-                </p>
-              </motion.div>
-            ))}
+          <h4 className="font-semibold text-lg mt-6">2.3 Altersbeschränkung</h4>
+          <p>Die App ist für Nutzer ab 16 Jahren konzipiert. Für Minderjährige empfehlen wir die Nutzung unter Aufsicht eines Erwachsenen.</p>
+        </div>
+      )
+    },
+    {
+      id: 'funktionen',
+      title: '3. App-Funktionen',
+      icon: Users,
+      content: (
+        <div className="space-y-4">
+          <p>Die Napolill App bietet folgende Funktionen:</p>
+          <ul className="list-disc pl-6 space-y-2">
+            <li>Aufnahme und Wiedergabe persönlicher Affirmationen</li>
+            <li>Nutzung wissenschaftlich belegter Solfeggio-Frequenzen</li>
+            <li>Mood-basierte Themen-Anpassung</li>
+            <li>Fortschrittsverfolgung und Badges</li>
+            <li>Optionales Cloud-Backup (verschlüsselt)</li>
+          </ul>
+          <div className="bg-primary-teal/10 p-6 rounded-lg border-l-4 border-primary-teal mt-6">
+            <p className="font-semibold mb-2">Funktionsgarantie:</p>
+            <p className="text-sm">Wir bemühen uns, die App jederzeit verfügbar zu halten, können jedoch keine 100%ige Verfügbarkeit garantieren. Wartungsarbeiten werden rechtzeitig angekündigt.</p>
           </div>
         </div>
-      </section>
+      )
+    },
+    {
+      id: 'haftung',
+      title: '4. Haftungsausschluss',
+      icon: AlertTriangle,
+      content: (
+        <div className="space-y-4">
+          <div className="bg-accent-rose/10 p-6 rounded-lg border-l-4 border-accent-rose">
+            <p className="font-semibold text-lg mb-3">Wichtiger Hinweis:</p>
+            <p className="mb-2"><strong>Napolill ist kein medizinisches Gerät und ersetzt keine professionelle medizinische oder psychologische Behandlung.</strong></p>
+          </div>
 
-      {/* Main Content */}
-      <section className="py-20 bg-secondary-purple/10">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="prose prose-lg prose-invert max-w-none"
-          >
-            {/* Geltungsbereich */}
-            <div className="mb-12">
-              <h2 className="text-3xl font-bold text-foreground mb-6">
-                1. Geltungsbereich
-              </h2>
-              <div className="bg-background p-6 rounded-lg border border-primary-teal/20">
-                <p className="text-foreground/70 leading-relaxed">
-                  Diese Allgemeinen Geschäftsbedingungen (AGB) gelten für die Nutzung 
-                  der mobilen Applikation &quot;Napolill&quot; (im Folgenden &quot;App&quot;) der 
-                  Napolill GmbH (im Folgenden &quot;Anbieter&quot;).
-                </p>
-                <p className="text-foreground/70 leading-relaxed mt-4">
-                  Mit der Installation und Nutzung der App akzeptierst du diese 
-                  AGB in ihrer jeweils gültigen Fassung.
-                </p>
-              </div>
-            </div>
+          <h4 className="font-semibold text-lg mt-6">4.1 Keine Gesundheitsberatung</h4>
+          <p>Die App dient als unterstützendes Wellness-Tool. Bei gesundheitlichen Problemen konsultiere immer einen qualifizierten Arzt oder Therapeuten.</p>
 
-            {/* Leistungen */}
-            <div className="mb-12">
-              <h2 className="text-3xl font-bold text-foreground mb-6">
-                2. Leistungen des Anbieters
-              </h2>
-              <div className="space-y-4">
-                <p className="text-foreground/70 leading-relaxed">
-                  <strong>2.1 App-Funktionen:</strong><br />
-                  Die Napolill App bietet folgende Hauptfunktionen:
-                </p>
-                <ul className="list-disc list-inside text-foreground/70 space-y-2 ml-4">
-                  <li>Aufnahme und Wiedergabe persönlicher Affirmationen</li>
-                  <li>Nutzung wissenschaftlich validierter Solfeggio-Frequenzen</li>
-                  <li>Mood-basierte Themes und Anpassungen</li>
-                  <li>Fortschrittsverfolgung mit Badges und Statistiken</li>
-                  <li>Lokale und Cloud-Speicherung von Daten</li>
-                </ul>
-                <p className="text-foreground/70 leading-relaxed mt-4">
-                  <strong>2.2 Kostenlose Nutzung:</strong><br />
-                  Die grundlegenden App-Funktionen sind vollständig kostenlos. 
-                  Es gibt keine versteckten Kosten, Abonnements oder In-App-Käufe.
-                </p>
-                <p className="text-foreground/70 leading-relaxed">
-                  <strong>2.3 Verfügbarkeit:</strong><br />
-                  Der Anbieter bemüht sich um eine hohe Verfügbarkeit der App, 
-                  kann jedoch keine Garantie für eine unterbrechungsfreie Nutzung geben.
-                </p>
-              </div>
-            </div>
+          <h4 className="font-semibold text-lg mt-6">4.2 Haftungsbeschränkung</h4>
+          <p>Wir haften nur für Vorsatz und grobe Fahrlässigkeit. Die Haftung für leichte Fahrlässigkeit ist ausgeschlossen, soweit gesetzlich zulässig.</p>
 
-            {/* Nutzerrechte und -pflichten */}
-            <div className="mb-12">
-              <h2 className="text-3xl font-bold text-foreground mb-6">
-                3. Nutzerrechte und -pflichten
-              </h2>
-              <div className="space-y-4">
-                <p className="text-foreground/70 leading-relaxed">
-                  <strong>3.1 Nutzungsrecht:</strong><br />
-                  Du erhältst ein nicht-exklusives, nicht-übertragbares Recht 
-                  zur Nutzung der App für persönliche, nicht-kommerzielle Zwecke.
-                </p>
-                <p className="text-foreground/70 leading-relaxed">
-                  <strong>3.2 Nutzerpflichten:</strong><br />
-                  Du verpflichtest dich:
-                </p>
-                <ul className="list-disc list-inside text-foreground/70 space-y-2 ml-4">
-                  <li>Die App nur für legale Zwecke zu nutzen</li>
-                  <li>Keine schädlichen oder rechtswidrigen Inhalte zu erstellen</li>
-                  <li>Die Rechte Dritter zu respektieren</li>
-                  <li>Die App nicht zu kopieren, zu modifizieren oder zu reverse-engineeren</li>
-                </ul>
-                <p className="text-foreground/70 leading-relaxed mt-4">
-                  <strong>3.3 Altersbeschränkung:</strong><br />
-                  Die App ist für Nutzer ab 16 Jahren bestimmt. Minderjährige 
-                  sollten die App nur mit Zustimmung ihrer Erziehungsberechtigten nutzen.
-                </p>
-              </div>
-            </div>
-
-            {/* Haftungsausschluss */}
-            <div className="mb-12">
-              <h2 className="text-3xl font-bold text-foreground mb-6">
-                4. Haftungsausschluss
-              </h2>
-              <div className="space-y-4">
-                <div className="bg-accent-rose/10 p-6 rounded-lg border border-accent-rose/20">
-                  <p className="text-accent-rose font-medium mb-2">
-                    ⚠️ Wichtiger Hinweis:
-                  </p>
-                  <p className="text-foreground/70">
-                    Napolill ist kein medizinisches Gerät oder Medikament und 
-                    ersetzt keine professionelle medizinische, psychologische 
-                    oder therapeutische Behandlung.
-                  </p>
-                </div>
-                <p className="text-foreground/70 leading-relaxed">
-                  <strong>4.1 Keine medizinische Beratung:</strong><br />
-                  Die App dient ausschließlich als unterstützendes Wellness-Tool. 
-                  Bei gesundheitlichen oder psychischen Problemen solltest du 
-                  immer einen qualifizierten Arzt oder Therapeuten konsultieren.
-                </p>
-                <p className="text-foreground/70 leading-relaxed">
-                  <strong>4.2 Haftungsbeschränkung:</strong><br />
-                  Der Anbieter haftet nicht für:
-                </p>
-                <ul className="list-disc list-inside text-foreground/70 space-y-2 ml-4">
-                  <li>Schäden durch unsachgemäße Nutzung der App</li>
-                  <li>Verluste von Daten durch technische Probleme</li>
-                  <li>Auswirkungen der App-Nutzung auf Gesundheit oder Wohlbefinden</li>
-                  <li>Indirekte oder Folgeschäden</li>
-                </ul>
-              </div>
-            </div>
-
-            {/* Datenschutz */}
-            <div className="mb-12">
-              <h2 className="text-3xl font-bold text-foreground mb-6">
-                5. Datenschutz
-              </h2>
-              <p className="text-foreground/70 leading-relaxed">
-                Der Schutz deiner persönlichen Daten ist uns wichtig. 
-                Ausführliche Informationen findest du in unserer 
-                <Link href="/privacy" className="text-accent-rose hover:underline ml-1">
-                  Datenschutzerklärung
-                </Link>.
-              </p>
-              <div className="bg-background p-6 rounded-lg border border-primary-teal/20 mt-4">
-                <p className="text-foreground/70 leading-relaxed">
-                  <strong>Grundsätze:</strong><br />
-                  • Minimale Datensammlung<br />
-                  • Lokale Speicherung sensibler Daten<br />
-                  • Keine Weitergabe an Dritte<br />
-                  • DSGVO-konforme Verarbeitung
-                </p>
-              </div>
-            </div>
-
-            {/* Änderungen der AGB */}
-            <div className="mb-12">
-              <h2 className="text-3xl font-bold text-foreground mb-6">
-                6. Änderungen der AGB
-              </h2>
-              <p className="text-foreground/70 leading-relaxed">
-                Der Anbieter behält sich das Recht vor, diese AGB jederzeit 
-                zu ändern. Wesentliche Änderungen werden dir mindestens 30 Tage 
-                vor Inkrafttreten mitgeteilt. Die fortgesetzte Nutzung der App 
-                nach einer Änderung gilt als Zustimmung zu den neuen Bedingungen.
-              </p>
-            </div>
-
-            {/* Schlussbestimmungen */}
-            <div className="mb-12">
-              <h2 className="text-3xl font-bold text-foreground mb-6">
-                7. Schlussbestimmungen
-              </h2>
-              <div className="space-y-4">
-                <p className="text-foreground/70 leading-relaxed">
-                  <strong>7.1 Anwendbares Recht:</strong><br />
-                  Es gilt deutsches Recht unter Ausschluss des UN-Kaufrechts.
-                </p>
-                <p className="text-foreground/70 leading-relaxed">
-                  <strong>7.2 Gerichtsstand:</strong><br />
-                  Gerichtsstand ist der Sitz des Anbieters, sofern du 
-                  Kaufmann, juristische Person des öffentlichen Rechts oder 
-                  öffentlich-rechtliches Sondervermögen bist.
-                </p>
-                <p className="text-foreground/70 leading-relaxed">
-                  <strong>7.3 Salvatorische Klausel:</strong><br />
-                  Sollten einzelne Bestimmungen dieser AGB unwirksam sein, 
-                  bleibt die Wirksamkeit der übrigen Bestimmungen unberührt.
-                </p>
-                <p className="text-foreground/70 leading-relaxed">
-                  <strong>7.4 Kontakt:</strong><br />
-                  Bei Fragen zu diesen AGB kannst du uns unter 
-                  <a href="mailto:legal@napolill.com" className="text-accent-rose hover:underline">
-                    legal@napolill.com
-                  </a> kontaktieren.
-                </p>
-              </div>
-            </div>
-
-            {/* Stand */}
-            <div className="mb-12">
-              <h2 className="text-3xl font-bold text-foreground mb-6">
-                8. Stand
-              </h2>
-              <div className="bg-background p-6 rounded-lg border border-primary-teal/20">
-                <p className="text-foreground/70 leading-relaxed">
-                  Diese AGB gelten ab dem 1. Januar 2024.<br />
-                  Stand: Januar 2024
-                </p>
-              </div>
-            </div>
-          </motion.div>
+          <h4 className="font-semibold text-lg mt-6">4.3 Datenverlust</h4>
+          <p>Wir empfehlen regelmäßige Backups deiner Daten. Für Datenverluste übernehmen wir keine Haftung, außer bei Vorsatz oder grober Fahrlässigkeit.</p>
         </div>
-      </section>
-
-      {/* Contact */}
-      <section className="py-20 bg-background">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="space-y-8"
-          >
-            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-              Fragen zu den AGB?
-            </h2>
-            <p className="text-xl text-foreground/70 max-w-2xl mx-auto mb-8">
-              Wenn du Fragen zu diesen Geschäftsbedingungen hast oder 
-              rechtliche Beratung benötigst, kontaktiere uns gerne.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-napolill-gradient text-white hover:opacity-90">
-                <Scale className="w-5 h-5 mr-2" />
-                Rechtliches kontaktieren
-              </Button>
-              <Button size="lg">
-                <FileText className="w-5 h-5 mr-2" />
-                AGB herunterladen
-              </Button>
-            </div>
-          </motion.div>
+      )
+    },
+    {
+      id: 'urheberrecht',
+      title: '5. Urheberrecht',
+      icon: Shield,
+      content: (
+        <div className="space-y-4">
+          <p>Alle Inhalte der Napolill App (Texte, Bilder, Audio, Code) sind urheberrechtlich geschützt.</p>
+          <ul className="list-disc pl-6 space-y-2 mt-4">
+            <li>Du erhältst ein nicht-exklusives, nicht-übertragbares Nutzungsrecht</li>
+            <li>Die kommerzielle Nutzung ohne schriftliche Genehmigung ist untersagt</li>
+            <li>Deine selbst erstellten Affirmationen bleiben dein Eigentum</li>
+            <li>Solfeggio-Frequenzen dürfen nur im Rahmen der App-Nutzung verwendet werden</li>
+          </ul>
         </div>
-      </section>
+      )
+    },
+    {
+      id: 'aenderungen',
+      title: '6. Änderungen der AGB',
+      icon: FileText,
+      content: (
+        <div className="space-y-4">
+          <p>Wir behalten uns das Recht vor, diese AGB jederzeit zu ändern. Über wesentliche Änderungen informieren wir dich rechtzeitig:</p>
+          <ul className="list-disc pl-6 space-y-2 mt-4">
+            <li>Per In-App-Benachrichtigung</li>
+            <li>Per E-Mail (wenn angegeben)</li>
+            <li>Auf der Website</li>
+          </ul>
+          <p className="mt-4">Die fortgesetzte Nutzung nach Änderungen gilt als Zustimmung zu den neuen AGB. Wenn du nicht einverstanden bist, kannst du die App deinstallieren.</p>
+        </div>
+      )
+    },
+    {
+      id: 'schlussbestimmungen',
+      title: '7. Schlussbestimmungen',
+      icon: Scale,
+      content: (
+        <div className="space-y-4">
+          <h4 className="font-semibold text-lg">7.1 Anwendbares Recht</h4>
+          <p>Es gilt das Recht der Bundesrepublik Deutschland unter Ausschluss des UN-Kaufrechts.</p>
+
+          <h4 className="font-semibold text-lg mt-6">7.2 Gerichtsstand</h4>
+          <p>Gerichtsstand ist Berlin, Deutschland (soweit gesetzlich zulässig).</p>
+
+          <h4 className="font-semibold text-lg mt-6">7.3 Salvatorische Klausel</h4>
+          <p>Sollten einzelne Bestimmungen unwirksam sein, bleibt die Wirksamkeit der übrigen Bestimmungen unberührt.</p>
+
+          <h4 className="font-semibold text-lg mt-6">7.4 Kontakt</h4>
+          <div className="bg-secondary-purple/10 p-6 rounded-lg mt-4">
+            <p>Bei Fragen zu den AGB:</p>
+            <p className="mt-2"><strong>E-Mail:</strong> <a href="mailto:legal@napolill.com" className="text-primary-teal hover:underline">legal@napolill.com</a></p>
+          </div>
+        </div>
+      )
+    }
+  ];
+
+  return (
+    <Layout>
+      <LegalHeroSection 
+        title="Allgemeine Geschäftsbedingungen"
+        description="Die Nutzungsbedingungen für die Napolill App - transparent, fair und verständlich."
+        infoItems={heroInfo}
+      />
+      <LegalContentSection 
+        sections={contentSections}
+        lastUpdated="15. Januar 2024"
+      />
     </Layout>
   );
 }

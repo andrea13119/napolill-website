@@ -3,9 +3,9 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { Menu, X, Download } from 'lucide-react';
-import { Button } from './ui/Button';
-import { ThemeToggle } from './ThemeToggle';
-import { NapolillLogo } from './NapolillLogo';
+import { Button } from '../ui/Button';
+import { ThemeToggle } from '../ThemeToggle';
+import { NapolillLogo } from '../NapolillLogo';
 
 const navigation = [
   { name: 'Home', href: '/' },
@@ -47,7 +47,7 @@ export function Navigation() {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-6 xl:space-x-8">
+          <div className="hidden md:flex items-center space-x-6 xl:space-x-8">
             {navigation.map((item) => (
               <Link
                 key={item.name}
@@ -60,7 +60,7 @@ export function Navigation() {
           </div>
 
           {/* Desktop Actions */}
-          <div className="hidden lg:flex items-center space-x-3">
+          <div className="hidden md:flex items-center space-x-3">
             <Button size="sm" className="text-sm h-12">
               <Download className="w-5 h-5 mr-2" />
               Download
@@ -71,7 +71,7 @@ export function Navigation() {
           </div>
 
           {/* Mobile menu button */}
-          <div className="lg:hidden flex items-center space-x-3">
+          <div className="md:hidden flex items-center space-x-3">
             <div className="w-12 h-12 flex items-center justify-center">
               <ThemeToggle />
             </div>
@@ -91,7 +91,7 @@ export function Navigation() {
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="lg:hidden">
+          <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 glass-dark rounded-lg mt-2 mx-4">
               {navigation.map((item) => (
                 <Link
@@ -116,3 +116,4 @@ export function Navigation() {
     </nav>
   );
 }
+
