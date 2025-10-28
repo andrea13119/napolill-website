@@ -544,3 +544,42 @@ footer a:hover {
   text-shadow: 0 2px 8px rgba(255, 179, 179, 0.6), 0 4px 12px rgba(0, 0, 0, 0.8) !important;
   transform: translateY(-1px) !important;
 }
+
+/* Desktop Navigation & Header Fix - Media Query Workaround */
+/* Desktop elements: Show on screens ≥768px */
+@media (min-width: 768px) {
+  .desktop-nav {
+    display: flex !important;
+  }
+  
+  .desktop-header {
+    display: block !important;
+  }
+  
+  .mobile-nav {
+    display: none !important;
+  }
+  
+  .mobile-header {
+    display: none !important;
+  }
+}
+
+/* Mobile elements: Show on screens <768px */
+@media (max-width: 767px) {
+  .desktop-nav {
+    display: none !important;
+  }
+  
+  .desktop-header {
+    display: none !important;
+  }
+  
+  .mobile-nav {
+    display: flex !important;
+  }
+  
+  .mobile-header {
+    display: block !important;
+  }
+}

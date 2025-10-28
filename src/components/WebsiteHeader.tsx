@@ -12,7 +12,7 @@ export function WebsiteHeader({ className = '', variant = 'desktop' }: WebsiteHe
   
   if (variant === 'mobile') {
     return (
-      <div className={`${baseClasses} md:hidden ${className}`}>
+      <div className={`${baseClasses} mobile-header ${className}`}>
         <img 
           src="/images/icons/website-header_mobile.svg" 
           alt="Napolill Website Header Mobile" 
@@ -27,7 +27,7 @@ export function WebsiteHeader({ className = '', variant = 'desktop' }: WebsiteHe
   }
 
   return (
-    <div className={`${baseClasses} hidden md:block ${className}`}>
+    <div className={`${baseClasses} desktop-header ${className}`}>
       <img 
         src="/images/icons/website-header.svg" 
         alt="Napolill Website Header Desktop" 
