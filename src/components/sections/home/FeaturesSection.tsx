@@ -17,10 +17,10 @@ export function FeaturesSection() {
           className="text-center mb-16"
         >
           <h2 className="text-5xl md:text-6xl font-bold text-foreground mb-8">
-            Solfeggio-Frequenzen & Affirmationen
+            Uno-Reverse
           </h2>
           <p className="text-xl text-foreground/80 max-w-4xl mx-auto">
-            Musik, die speziell für Leistung und die Aufgaben entwickelt wurde, die dir am wichtigsten sind.
+            Was von außen in dich geschrieben wurde, überschreibst du jetzt von innen – mit Vorstellungskraft, klaren Worten und täglicher Wiederholung.
           </p>
         </motion.div>
 
@@ -34,35 +34,71 @@ export function FeaturesSection() {
         >
           <div className="relative max-w-4xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="bg-gradient-to-br from-teal-900/50 to-blue-900/50 rounded-3xl p-6 border border-teal-800/50">
-                <div className="aspect-[9/16] bg-card-bg/50 rounded-2xl flex items-center justify-center">
-                  <div className="text-center">
-                    <div className="w-16 h-16 bg-teal-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                      <Zap className="w-8 h-8 text-teal-400" />
+              <div className="bg-gradient-to-br from-teal-900/50 to-blue-900/50 rounded-3xl p-5 border border-teal-800/50 max-w-xs mx-auto">
+                <div className="aspect-[3/4] bg-card-bg/50 rounded-2xl flex items-center justify-center">
+                  <div className="text-center px-5">
+                    <div className="w-14 h-14 bg-teal-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                      <Zap className="w-8 h-8 text-teal-300" />
                     </div>
-                    <p className="text-foreground/80 text-sm">Solfeggio-Frequenzen</p>
+                    <h3 className="text-foreground text-lg font-semibold mb-3">
+                      Veränderung ≠ linear:
+                    </h3>
+                    <p className="text-foreground/70 text-base leading-relaxed mb-5">
+                      Stimmungsschwankungen sind beim Umlernen normal – verstehe sie, statt sie zu fürchten.
+                    </p>
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      className="px-6 py-3 text-base rounded-xl border-teal-500/50 text-teal-200 hover:text-white hover:bg-teal-600/80 transition-all duration-300 hover:scale-105"
+                    >
+                      Erfahre mehr
+                    </Button>
                   </div>
                 </div>
               </div>
               
-              <div className="bg-gradient-to-br from-purple-900/50 to-pink-900/50 rounded-3xl p-6 border border-purple-800/50">
-                <div className="aspect-[9/16] bg-card-bg/50 rounded-2xl flex items-center justify-center">
-                  <div className="text-center">
-                    <div className="w-16 h-16 bg-purple-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                      <Brain className="w-8 h-8 text-purple-400" />
+              <div className="bg-gradient-to-br from-purple-900/50 to-pink-900/50 rounded-3xl p-5 border border-purple-800/50 max-w-xs mx-auto">
+                <div className="aspect-[3/4] bg-card-bg/50 rounded-2xl flex items-center justify-center">
+                  <div className="text-center px-5">
+                    <div className="w-14 h-14 bg-purple-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                      <Brain className="w-8 h-8 text-purple-300" />
                     </div>
-                    <p className="text-foreground/80 text-sm">Affirmationen</p>
+                    <h3 className="text-foreground text-lg font-semibold mb-3">
+                      Intensität prägt:
+                    </h3>
+                    <p className="text-foreground/70 text-base leading-relaxed mb-5">
+                      Emotionale Aufladung (Körpersprache, Tonfall, Visualisierung) festigt Neues.
+                    </p>
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      className="px-6 py-3 text-base rounded-xl border-purple-500/50 text-purple-200 hover:text-white hover:bg-purple-600/80 transition-all duration-300 hover:scale-105"
+                    >
+                      Erfahre mehr
+                    </Button>
                   </div>
                 </div>
               </div>
               
-              <div className="bg-gradient-to-br from-blue-900/50 to-purple-900/50 rounded-3xl p-6 border border-blue-800/50">
-                <div className="aspect-[9/16] bg-card-bg/50 rounded-2xl flex items-center justify-center">
-                  <div className="text-center">
-                    <div className="w-16 h-16 bg-blue-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                      <Heart className="w-8 h-8 text-blue-400" />
+              <div className="bg-gradient-to-br from-blue-900/50 to-purple-900/50 rounded-3xl p-5 border border-blue-800/50 max-w-xs mx-auto">
+                <div className="aspect-[3/4] bg-card-bg/50 rounded-2xl flex items-center justify-center">
+                  <div className="text-center px-5">
+                    <div className="w-14 h-14 bg-blue-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                      <Heart className="w-8 h-8 text-blue-300" />
                     </div>
-                    <p className="text-foreground/80 text-sm">Mood-Themes</p>
+                    <h3 className="text-foreground text-lg font-semibold mb-3">
+                      Wiederholung gewinnt:
+                    </h3>
+                    <p className="text-foreground/70 text-base leading-relaxed mb-5">
+                      Gewohnheiten entstehen durch konsistentes Training im Alltag.
+                    </p>
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      className="px-6 py-3 text-base rounded-xl border-blue-500/50 text-blue-200 hover:text-white hover:bg-blue-600/80 transition-all duration-300 hover:scale-105"
+                    >
+                      Erfahre mehr
+                    </Button>
                   </div>
                 </div>
               </div>
@@ -87,7 +123,7 @@ export function FeaturesSection() {
                 Solfeggio-Frequenzen
               </h4>
               <p className="text-foreground/70">
-                Patentierte Audiotechnologie, die nachweislich effektiver für den Fokus ist als binaurale Beats und Fokus-Playlists von Spotify und YouTube.
+                Napolill mischt deine Stimme mit gezielten Frequenz-Soundscapes, die dein Nervensystem beruhigen, Fokus schärfen und mentale Routinen neu verankern.
               </p>
             </div>
           </div>
@@ -101,7 +137,7 @@ export function FeaturesSection() {
                 Anpassbare Affirmationen
               </h4>
               <p className="text-foreground/70">
-                Erhöhe einfach die Intensität für den maximalen Fokus-Effekt. Personalisiere deine Affirmationen für deine spezifischen Ziele.
+                Du nimmst klare, emotional aufgeladene Statements in deiner Stimme auf, verknüpfst sie mit Visualisierungen und festigst so täglich dein neues Selbstbild.
               </p>
             </div>
           </div>
@@ -113,14 +149,40 @@ export function FeaturesSection() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.6 }}
           viewport={{ once: true }}
-          className="text-center mt-12"
+          className="flex flex-col items-center gap-10 mt-12"
         >
-          <Link href="/app">
-            <Button className="bg-brain-gradient-blue-purple hover:bg-brain-gradient-purple-pink text-foreground font-bold px-8 py-4 rounded-2xl">
-              App-Features entdecken
-              <ArrowRight className="w-5 h-5 ml-2" />
-            </Button>
-          </Link>
+          <div className="max-w-3xl w-full bg-card-bg/80 border border-card-border rounded-3xl p-8 text-left">
+            <h3 className="text-3xl font-semibold text-foreground mb-6 text-center">
+              Wie Napolill hilft
+            </h3>
+            <div className="space-y-5 text-foreground/80 text-lg leading-relaxed">
+              <p>
+                <span className="font-semibold text-foreground">Aufnehmen</span> – Formuliere &amp; sprich deine Sätze klar und selbstbewusst.
+              </p>
+              <p>
+                <span className="font-semibold text-foreground">Vorstellen</span> – Sieh dich im gewünschten Zustand, als wäre er schon da.
+              </p>
+              <p>
+                <span className="font-semibold text-foreground">Dranbleiben</span> – Streaks, Erinnerungen &amp; Wenn-Dann-Pläne halten dich auf Kurs.
+              </p>
+            </div>
+            <div className="mt-8 flex flex-col sm:flex-row justify-center gap-4">
+              <Link href="/app">
+                <Button className="bg-brain-gradient-blue-purple hover:bg-brain-gradient-purple-pink text-foreground font-bold px-8 py-4 rounded-2xl">
+                  App-Features ansehen
+                  <ArrowRight className="w-5 h-5 ml-2" />
+                </Button>
+              </Link>
+              <Link href="/demo">
+                <Button
+                  variant="outline"
+                  className="px-8 py-4 rounded-2xl text-lg"
+                >
+                  Demo starten
+                </Button>
+              </Link>
+            </div>
+          </div>
         </motion.div>
       </div>
     </section>

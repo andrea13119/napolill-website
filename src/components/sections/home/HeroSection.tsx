@@ -61,12 +61,14 @@ export function HeroSection() {
               {/* Main Title */}
               <motion.div variants={itemVariants} className="space-y-10">
                 <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold leading-tight">
-                  <span className="block text-[#2D7A8A] drop-shadow-2xl shadow-black/80 mb-4">DEINE STIMME</span>
+                  <span className="block text-[#2D7A8A] drop-shadow-2xl shadow-black/80 mb-4">
+                    Napolill – Deine Stimme.
+                  </span>
                   <span className="block bg-gradient-to-r from-[#2D7A8A] via-[#2D7A8A] to-[#2D7A8A] bg-clip-text text-transparent drop-shadow-lg shadow-black/60">
-                    DEIN NEUES SELBST
+                    Dein neues Selbst.
                   </span>
                 </h1>
-                <p 
+                <p
                   className="text-lg sm:text-xl md:text-2xl max-w-4xl mx-auto leading-relaxed font-light text-foreground drop-shadow-xl shadow-black/70 text-center my-8"
                   style={{
                     marginTop: '40px',
@@ -74,17 +76,29 @@ export function HeroSection() {
                     fontSize: '1.5rem'
                   }}
                 >
-                  Trainiere täglich mit personalisierten Affirmationen und geführten Vorstellungsbildern, damit sich Stärke, Ruhe und Fokus zur Gewohnheit formen. Keine Floskeln. Nur Methoden, die Verhalten messbar verändern.
+                  Nimm deine Affirmationen mit deiner Stimme auf und kombiniere sie mit geführter Vorstellung.
+                  <br />
+                  So werden Stärke, Ruhe und Fokus zur Gewohnheit.
                 </p>
               </motion.div>
 
               {/* CTA Button */}
-              <motion.div variants={itemVariants} className="mt-14">
+              <motion.div
+                variants={itemVariants}
+                className="mt-14 flex flex-col sm:flex-row items-center justify-center gap-4"
+              >
                 <Button 
                   className="bg-gradient-to-r from-primary via-accent to-secondary hover:from-primary/90 hover:via-accent/90 hover:to-secondary/90 text-button-text font-bold text-lg px-10 py-5 rounded-2xl shadow-2xl hover:shadow-primary/25 transition-all duration-300 hover:scale-105"
                   size="lg"
                 >
                   NAPOLILL KOSTENLOS TESTEN
+                </Button>
+                <Button
+                  variant="outline"
+                  size="lg"
+                  className="px-10 py-5 text-lg rounded-2xl border-primary/50 text-primary hover:text-white hover:bg-primary/80 transition-all duration-300 hover:scale-105"
+                >
+                  Wie es wirkt
                 </Button>
               </motion.div>
 
